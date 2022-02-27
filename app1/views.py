@@ -8,6 +8,8 @@ from . models import *
 from django.http import HttpResponse
 from django.contrib import messages
 
+from django.db.models.query_utils import Q
+
 # Create your views here.
 
 def hello(request):
@@ -76,7 +78,7 @@ def dashboard(request):
         print(f"{name} is {student}")
         print(type(student))
         
-        if request.POST: 
+        if request.POST == 'details': 
             # saving data in database
             data = studentData()
             data.name = request.POST['name']
@@ -93,11 +95,17 @@ def dashboard(request):
             return HttpResponse("Data Successfully Submitted")
         
         details = studentData.objects.all()
-        for i in details:
-            print(i.email)
-            
-    
-        return render(request,'dashboard.html', {'name': name, 'student': student, 'details': details})
+
+        # search module start
+        print("Inside search module")
+        s = request.GET.get('search')
+        print(s)
+        if s:
+            q = studentData.objects.filter(Q(name__icontains = s) | Q(email__icontains = s) | Q(city__icontains = s) | Q(dob__icontains = s) | Q(uname__icontains = s) | Q(cname__icontains = s) | Q(pyear__icontains = s) | Q(spi__icontains = s) | Q(pl__icontains = s) | Q(description__icontains = s))
+        else:
+            q = details
+        print(q)
+        return render(request,'dashboard.html', {'name': name, 'student': student, 'details': details, 's':q})
     return redirect('LOGIN')
 
 def userLogOut(request):
