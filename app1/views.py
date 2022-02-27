@@ -1,3 +1,4 @@
+from ast import Num
 from email.headerregistry import Address
 from django.shortcuts import render, redirect, HttpResponseRedirect
 from django.http import HttpResponse
@@ -14,6 +15,7 @@ def SignupView(request):
     if request.POST: 
         Name = request.POST['name']
         Email = request.POST['email']
+        Number = request.POST['number']
         Address = request.POST['address']
         Password = request.POST['password']
         ConfirmPassword = request.POST['confirmPassword']
@@ -26,6 +28,7 @@ def SignupView(request):
                 v = signUp()
                 v.name = Name
                 v.email = Email
+                v.number = Number
                 v.address = Address
                 v.password = Password
                 v.save()
