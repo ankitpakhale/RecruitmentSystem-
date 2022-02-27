@@ -105,6 +105,7 @@ def dashboard(request):
         else:
             q = details
         print(q)
+        
         return render(request,'dashboard.html', {'name': name, 'student': student, 'details': details, 's':q})
     return redirect('LOGIN')
 
