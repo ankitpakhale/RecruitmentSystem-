@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recruitment dashboard</title>
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin: 0 auto;
+            padding: 0;
+            color: #000;
+            font-size: 18px;
+            line-height: 35px;
+            background-color: #e6e6e6;
+        }
+
+        .container {
+            margin: 30px;
+            padding: 26px;
+            /* border: 2px solid #334bb4; */
+        }
+
+        .dash {
+            text-align: center;
+            margin: 13px;
+            padding: 21px
+        }
+
+        .dash h4 {
+            font-size: 45px;
+            color: #002153;
+            text-decoration: underline;
+            font-weight: 900;
+        }
+
+        .top {
+            display: flex;
+            flex-direction: row;
+            text-decoration: uppercase;
+            margin: 20px 0;
+        }
+
+        .logout a {
+            display: block;
+            width: 80px;
+            height: 18px;
+            background: #D4A2A2;
+            padding: 14px;
+            text-align: center;
+            border-radius: 5px;
+            color: #fff;
+            font-weight: 900;
+            font-size: 16px;
+            line-height: 0px;
+            text-decoration: none;
+            border: 2px solid transparent;
+            transition: all 0.5s ease;
+        }
+
+        .logout a:hover {
+            transition: all 0.5s ease;
+            background: #E6E6E6;
+            color: #002153;
+            border: 2px solid #D4A2A2;
+        }
+
+        .top .name {
+            color: #002153;
+            font-family: sans-serif;
+            font-weight: 650;
+            font-size: 24px;
+            position: absolute;
+            right: 30px;
+            margin: 0 50px;
+            padding: 0 10px;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            color: #002153;
+            font-size: 22px;
+            margin: 10px 0;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        .form-group input {
+            display: block;
+            width: 20%;
+            margin: 10px auto;
+            padding: 10px;
+        }
+
+        .as {
+            column-count: 2;
+            margin: 10px auto;
+        }
+
+
+        .type-1 {
+            border-radius: 6px;
+            background-color: #E6E6E6;
+            border: 0;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+            transition: .3s box-shadow;
+            padding: 7px 13px;
+            width: 35%;
+        }
+
+        .type-1:hover {
+            box-shadow: 0 0 4px #D4A2A2;
+            /* border: 1px solid #D4A2A2; */
+        }
+
+        .type-2 {
+            border-radius: 6px;
+            background-color: #E6E6E6;
+            border: 0;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+            transition: .3s box-shadow;
+            padding: 7px 13px;
+            margin: 10px auto;
+            display: block;
+            width: 20%;
+            font-size: 16px;
+            font-weight: 550;
+            transition: all 0.5s ease;
+        }
+
+        .type-2:hover {
+            transition: all 0.5s ease;
+            box-shadow: 5px 5px 5px #D4A2A2;
+            /* border: 1px solid #D4A2A2; */
+        }
+
+        .data {
+            border-radius: 6px;
+            background-color: #e4d7d7;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 5px 5px 5px #D4A2A2;
+            
+        }
+
+        h3 {
+            color: #002153;
+            margin: 10px 0;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-size: 30px;
+        }
+
+        .data h3 {
+            color: #002153;
+            margin: 10px 0;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+
+        .data ul {
+            list-style-type: none;
+        }
+
+
+        /* Create two equal columns that floats next to each other */
+        .row {
+            border-radius: 6px;
+        }
+
+        .column1 {
+            float: left;
+            width: 50%;
+            padding: 10px;
+            height: auto;
+            border-right: 0.5px solid #000;
+        }
+
+        .column2 {
+            float: left;
+            width: 50%;
+            padding: 10px;
+            height: auto;
+            border-left: 0.5px solid #000;
+        }
+
+        .column1 a,
+        .column2 a {
+            margin: 10px 3px;
+            padding: 3px 13px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        table,
+        th,
+        td {
+            border: 0.5px solid black;
+        }
+
+        tr.items {
+            text-align: left;
+        }
+
+        td {
+            transition: all 0.5s ease;
+            padding: 3px 13px;
+            cursor: pointer;
+        }
+
+        td:hover {
+            transition: all 0.5s ease;
+            background-color: #D4A2A2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="dash">
+            <h4>Recruitment Dashboard</h4>
+        </div>
+
+        <div class="top">
+            <div class="logout">
+                <a href="{% url 'LOGOUT' %}" class="logout">
+                    Logout
+                </a>
+            </div>
+
+            <div class="name">
+                Welcome {{key.name}}
+            </div>
+        </div>
+
+        <!-- for uploading data -->
+        <div class="data">
+
+            <form method="POST">
+                {% csrf_token %}
+                <h4>Bank Statement</h4>
+                <div class="link">
+                    <input class="type-1" type="file" accept=".pdf" name="file" multiple>
+                    <button class="type-2" type="submit" value="upload" name="upload">Upload</button>
+                </div>
+            </form>
+
+            <hr>
+
+            <div class="as">
+
+                <form method="POST">
+                    {% csrf_token %}
+                    <h4>Seller Invoice</h4>
+                    <div class="link">
+                        <input class="type-1" type="file" accept=".jpg,.pdf" name="file" multiple>
+                        <button class="type-2" type="submit" value="upload" name="upload">Upload</button>
+                    </div>
+                </form>
+
+                <form method="POST">
+                    {% csrf_token %}
+                    <h4>Purchase Invoice</h4>
+                    <div class="link">
+                        <input class="type-1" type="file" accept=".jpg,.pdf" name="file" multiple>
+                        <button class="type-2" type="submit" value="upload" name="upload">Upload</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+        <!-- for sendind data -->
+        <h3>Select file to Send</h3>
+        <div class="data">
+            <form method="POST">
+                {% csrf_token %}
+                <ul>
+                    <li>
+                        
+                        <div class="form-group">
+                            <input class="type-1" type="email" name="received_from"
+                                placeholder="Enter Reciever Email Id" required="required">
+                        </div>
+                    </li>
+                    <li>
+                        <select class="type-1" name="ofile" required="required">
+                           
+                        </select>
+                    </li>
+                    <li>
+                        <input class="type-2" type="submit" value="send" name="send">
+                    </li>
+                </ul>
+            </form>
+        </div>
+
+        <h3>Received Data</h3>
+        <div class="data">
+            <div class="row">
+                <div class="column1">
+                    <h2>My Data</h2>
+                    <table>
+                        <tr>
+                            <th>Files</th>
+                            <!-- <th>My Data</th> -->
+                        </tr>
+                      
+                    </table>
+                </div>
+
+                <div class="column2">
+                    <h2>Received Data</h2>
+                    <table>
+                        <tr>
+                            <th>Files</th>
+                            <th>Received From</th>
+                        </tr>
+                       
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
