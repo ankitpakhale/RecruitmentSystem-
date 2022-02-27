@@ -162,11 +162,8 @@
             font-weight: bold;
         }
 
-        /* Clear floats after the columns */
-        .row:after {
-            content: "";
-            display: table;
-            clear: both;
+        .row {
+            display: flex;    
         }
 
         table {
@@ -192,6 +189,35 @@
         td:hover {
             transition: all 0.5s ease;
             background-color: #D4A2A2;
+        }
+        textarea{
+            width: 650px;
+            height: 80px;
+
+            border-radius: 6px;
+            background-color: #E6E6E6;
+            border: 0;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+            transition: .3s box-shadow;
+            padding: 7px 13px;
+            margin: 10px auto;
+            font-size: 16px;
+            font-weight: 550;
+        }
+
+        .type-1 {
+            border-radius: 6px;
+            background-color: #E6E6E6;
+            border: 0;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+            transition: .3s box-shadow;
+            padding: 7px 13px;
+            margin: 10px auto;
+            display: block;
+            width: 20%;
+            font-size: 16px;
+            font-weight: 550;
+            transition: all 0.5s ease;
         }
     </style>
 </head>
@@ -219,7 +245,23 @@
         <div class="data">
             <h2>Complaint Box</h2>
             <form method="POST">
-                <input class="type-2" type="text" name="comp" placeholder="Write your complaint here">
+                <div class="row">
+                    <input class="type-1" type="text" name="name" placeholder="Name">
+                    <input class="type-1" type="text" name="email" placeholder="Email">
+                    <input class="type-1" type="text" name="city" placeholder="City">
+                </div>
+                <div class="row">
+                    <input class="type-1" type="text" name="dob" placeholder="Date of birth">
+                    <input class="type-1" type="text" name="uname" placeholder="University Name">
+                    <input class="type-1" type="text" name="cname" placeholder="College Name">
+                </div>
+                <div class="row">
+                    <input class="type-1" type="text" name="pyear" placeholder="Pass out Year">
+                    <input class="type-1" type="text" name="spi" placeholder="Total SPI">
+                    <input class="type-1" type="text" name="pl" placeholder="Programming language">
+                </div>
+                <textarea name="description" cols="30" rows="10" placeholder="Write Project Description here"></textarea>
+                
                 <input class="type-2" type="button" name="submit" value="Submit">
             </form>
         </div>
@@ -228,7 +270,7 @@
         <!-- viewing applications -->
         <div class="data">
             <div class="column">
-                <h2>Applications</h2>
+                <h2>Applied Applications</h2>
                 <table>
                     <tr>
                         <th>Received Application</th>
