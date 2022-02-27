@@ -247,6 +247,7 @@
         <div class="data">
             <h2>Application Form</h2>
             <form method="POST">
+                {% csrf_token %}
                 <div class="row">
                     <input class="type-1" type="text" name="name" placeholder="Name">
                     <input class="type-1" type="text" name="email" placeholder="Email">
@@ -276,7 +277,7 @@
                 <textarea name="description" cols="30" rows="10"
                     placeholder="Write Project Description here"></textarea>
 
-                <input class="type-2" type="button" name="submit" value="Submit">
+                <input class="type-2" type="submit" name="submit" value="Submit">
             </form>
         </div>
 
@@ -287,8 +288,17 @@
                 <h2>Applied Applications</h2>
                 <table>
                     <tr>
-                        <th>Received Application</th>
-                        <th>Status</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Date of Birth</th>
+                        <th>University Name</th>
+                        <th>College Name</th>
+                        <th>Passing Year</th>
+                        <th>SPI</th>
+                        <th>Project Description</th>
+                    </tr>
+                    <tr>
+                        {{details.name}}
                     </tr>
                 </table>
             </div>

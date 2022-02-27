@@ -1,5 +1,6 @@
 from ast import Num
 from email.headerregistry import Address
+from platform import uname
 from unicodedata import category
 from django.shortcuts import render, redirect, HttpResponseRedirect
 from django.http import HttpResponse
@@ -74,7 +75,26 @@ def dashboard(request):
         student = name.isStu
         print(f"{name} is {student}")
         print(type(student))
-        return render(request,'dashboard.html', {'name': name, 'student': student})
+        
+        if request.POST: 
+            # saving data in database
+            data = studentData()
+            data.name = request.POST['name']
+            data.email = request.POST['email']
+            data.city = request.POST['city']
+            data.dob = request.POST['dob']
+            data.uname = request.POST['uname']
+            data.cname = request.POST['cname']
+            data.pyear = request.POST['pyear']
+            data.spi = request.POST['spi']
+            data.pl = request.POST['pl']
+            data.description = request.POST['description']
+            data.save()
+        
+        details = studentData.objects.all()
+        print(details)
+        
+        return render(request,'dashboard.html', {'name': name, 'student': student, 'details': details})
     return redirect('LOGIN')
 
 def userLogOut(request):
