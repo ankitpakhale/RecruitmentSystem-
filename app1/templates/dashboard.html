@@ -163,7 +163,7 @@
         }
 
         .row {
-            display: flex;    
+            display: flex;
         }
 
         table {
@@ -190,7 +190,8 @@
             transition: all 0.5s ease;
             background-color: #D4A2A2;
         }
-        textarea{
+
+        textarea {
             width: 650px;
             height: 80px;
 
@@ -243,7 +244,7 @@
 
         <!-- submitting application form for AMC project -->
         <div class="data">
-            <h2>Complaint Box</h2>
+            <h2>Application Form</h2>
             <form method="POST">
                 <div class="row">
                     <input class="type-1" type="text" name="name" placeholder="Name">
@@ -251,17 +252,29 @@
                     <input class="type-1" type="text" name="city" placeholder="City">
                 </div>
                 <div class="row">
-                    <input class="type-1" type="text" name="dob" placeholder="Date of birth">
+                    <input class="type-1" type="date" name="dob" placeholder="Date of birth">
                     <input class="type-1" type="text" name="uname" placeholder="University Name">
                     <input class="type-1" type="text" name="cname" placeholder="College Name">
                 </div>
                 <div class="row">
-                    <input class="type-1" type="text" name="pyear" placeholder="Pass out Year">
-                    <input class="type-1" type="text" name="spi" placeholder="Total SPI">
-                    <input class="type-1" type="text" name="pl" placeholder="Programming language">
+                    <input class="type-1" type="number" name="pyear" placeholder="Pass out Year">
+                    <input class="type-1" type="number" name="spi" placeholder="Total SPI">
+
+                    <select class="type-1" name="pl" required="required">
+                        <option value="" disabled selected hidden>Select Programming Language</option>
+                        <option value="Python">Python</option>
+                        <option value="Java">Java</option>
+                        <option value="JavaScripts">JavaScripts</option>
+                        <option value="Kotlin">Kotlin</option>
+                        <option value="PHP">PHP</option>
+                        <option value="Ruby">Ruby</option>
+                    </select>
+
+                    <!-- <input class="type-1" type="text" name="pl" placeholder=""> -->
                 </div>
-                <textarea name="description" cols="30" rows="10" placeholder="Write Project Description here"></textarea>
-                
+                <textarea name="description" cols="30" rows="10"
+                    placeholder="Write Project Description here"></textarea>
+
                 <input class="type-2" type="button" name="submit" value="Submit">
             </form>
         </div>
