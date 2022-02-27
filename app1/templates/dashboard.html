@@ -188,13 +188,12 @@
 
         td:hover {
             transition: all 0.5s ease;
-            background-color: #D4A2A2;
+            background-color: #ffffe0;
         }
 
         textarea {
             width: 650px;
             height: 80px;
-
             border-radius: 6px;
             background-color: #E6E6E6;
             border: 0;
@@ -220,6 +219,27 @@
             font-weight: 550;
             transition: all 0.5s ease;
         }
+
+        input[type=text] {
+            padding: 6px;
+            margin: 13px 0;
+            font-size: 17px;
+            border: none;
+            width: 40%;
+            background-color: transparent;
+            border: 1px solid #000;
+        }
+        
+        .search-container button {
+            border: 1px solid #000;
+            padding: 6px;
+            margin-top: 8px;
+            margin-right: 16px;
+            background: #ddd;
+            font-size: 17px;
+            cursor: pointer;
+          }
+          
     </style>
 </head>
 
@@ -286,6 +306,14 @@
         <div class="data">
             <div class="column">
                 <h2>Applied Applications</h2>
+
+                <div class="search-container">
+                    <form method="POST">
+                        <input type="text" placeholder="Search.." name="search">
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+
                 <table>
                     <tr>
                         <th>Name</th>
@@ -295,11 +323,40 @@
                         <th>College Name</th>
                         <th>Passing Year</th>
                         <th>SPI</th>
+                        <th>Programming Language</th>
                         <th>Project Description</th>
                     </tr>
+                    {% for i in details %}
                     <tr>
-                        {{details.name}}
+                        <td>
+                            {{i.name}}
+                        </td>
+                        <td>
+                            {{i.email}}
+                        </td>
+                        <td>
+                            {{i.dob}}
+                        </td>
+                        <td>
+                            {{i.uname}}
+                        </td>
+                        <td>
+                            {{i.cname}}
+                        </td>
+                        <td>
+                            {{i.pyear}}
+                        </td>
+                        <td>
+                            {{i.spi}}
+                        </td>
+                        <td>
+                            {{i.pl}}
+                        </td>
+                        <td>
+                            {{i.description}}
+                        </td>
                     </tr>
+                    {% endfor %}
                 </table>
             </div>
         </div>

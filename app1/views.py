@@ -90,10 +90,13 @@ def dashboard(request):
             data.pl = request.POST['pl']
             data.description = request.POST['description']
             data.save()
+            return HttpResponse("Data Successfully Submitted")
         
         details = studentData.objects.all()
-        print(details)
-        
+        for i in details:
+            print(i.email)
+            
+    
         return render(request,'dashboard.html', {'name': name, 'student': student, 'details': details})
     return redirect('LOGIN')
 
