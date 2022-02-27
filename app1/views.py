@@ -1,5 +1,6 @@
 from ast import Num
 from email.headerregistry import Address
+from unicodedata import category
 from django.shortcuts import render, redirect, HttpResponseRedirect
 from django.http import HttpResponse
 from . models import *
@@ -19,6 +20,8 @@ def SignupView(request):
         Address = request.POST['address']
         Password = request.POST['password']
         ConfirmPassword = request.POST['confirmPassword']
+        Category = request.POST['cat']
+        print(Category)
         try:
             data = signUp.objects.filter(email=Email)
             if data:
@@ -31,6 +34,12 @@ def SignupView(request):
                 v.number = Number
                 v.address = Address
                 v.password = Password
+                if Category == 'rec':
+                    Category = 0
+                    v.isStu = Category
+                else:
+                    Category = 1
+                    v.isStu = Category
                 v.save()
                 print(f"{v.name} Signed up successfully")
                 return redirect('LOGIN')
@@ -61,11 +70,11 @@ def userLogin(request):
 def dashboard(request):
     if 'email' in request.session:
         name = signUp.objects.get(email = request.session['email'])
-        print(f"{name} is in Dashboard")
         
-        
-        
-        return render(request,'dashboard.html', {'name': name})
+        student = name.isStu
+        print(f"{name} is {student}")
+        print(type(student))
+        return render(request,'dashboard.html', {'name': name, 'student': student})
     return redirect('LOGIN')
 
 def userLogOut(request):

@@ -242,7 +242,8 @@
             </div>
         </div>
 
-        <!-- submitting application form for AMC project -->
+        {% if student == True %}
+        <!-- submitting application form for Placements -->
         <div class="data">
             <h2>Application Form</h2>
             <form method="POST">
@@ -279,7 +280,7 @@
             </form>
         </div>
 
-
+        {% else %}
         <!-- viewing applications -->
         <div class="data">
             <div class="column">
@@ -292,7 +293,7 @@
                 </table>
             </div>
         </div>
-
+        {% endif %}
 
     </div>
 </body>
