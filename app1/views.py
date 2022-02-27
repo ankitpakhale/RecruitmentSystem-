@@ -60,7 +60,9 @@ def userLogin(request):
 
 def dashboard(request):
     if 'email' in request.session:
-        return render(request,'dashboard.html')
+        name = signUp.objects.get(email = request.session['email'])
+        print(f"{name} is in Dashboard")
+        return render(request,'dashboard.html', {'name': name})
     return redirect('LOGIN')
 
 def userLogOut(request):

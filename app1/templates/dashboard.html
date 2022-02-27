@@ -6,8 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recruitment dashboard</title>
-
-
     <style>
         * {
             margin: 0;
@@ -59,7 +57,7 @@
             padding: 14px;
             text-align: center;
             border-radius: 5px;
-            color: #fff;
+            color: #002153;
             font-weight: 900;
             font-size: 16px;
             line-height: 0px;
@@ -89,9 +87,9 @@
 
         h2 {
             color: #002153;
-            font-size: 22px;
+            font-size: 30px;
             margin: 10px 0;
-            margin-top: 50px;
+            margin-top: 20px;
             margin-bottom: 20px;
         }
 
@@ -100,27 +98,6 @@
             width: 20%;
             margin: 10px auto;
             padding: 10px;
-        }
-
-        .as {
-            column-count: 2;
-            margin: 10px auto;
-        }
-
-
-        .type-1 {
-            border-radius: 6px;
-            background-color: #E6E6E6;
-            border: 0;
-            box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
-            transition: .3s box-shadow;
-            padding: 7px 13px;
-            width: 35%;
-        }
-
-        .type-1:hover {
-            box-shadow: 0 0 4px #D4A2A2;
-            /* border: 1px solid #D4A2A2; */
         }
 
         .type-2 {
@@ -150,7 +127,7 @@
             padding: 10px;
             text-align: center;
             box-shadow: 5px 5px 5px #D4A2A2;
-            
+            margin: 30px 0;
         }
 
         h3 {
@@ -169,34 +146,13 @@
             font-size: 22px;
         }
 
-        .data ul {
-            list-style-type: none;
-        }
-
-
-        /* Create two equal columns that floats next to each other */
-        .row {
-            border-radius: 6px;
-        }
-
-        .column1 {
-            float: left;
-            width: 50%;
+        .column {
+            width: 100%;
             padding: 10px;
             height: auto;
-            border-right: 0.5px solid #000;
         }
 
-        .column2 {
-            float: left;
-            width: 50%;
-            padding: 10px;
-            height: auto;
-            border-left: 0.5px solid #000;
-        }
-
-        .column1 a,
-        .column2 a {
+        .column a {
             margin: 10px 3px;
             padding: 3px 13px;
             font-size: 16px;
@@ -254,97 +210,31 @@
                     Logout
                 </a>
             </div>
-
             <div class="name">
-                Welcome {{key.name}}
+                Welcome {{name}}
             </div>
         </div>
 
-        <!-- for uploading data -->
+        <!-- submitting application form for AMC project -->
         <div class="data">
-
+            <h2>Complaint Box</h2>
             <form method="POST">
-                {% csrf_token %}
-                <h4>Bank Statement</h4>
-                <div class="link">
-                    <input class="type-1" type="file" accept=".pdf" name="file" multiple>
-                    <button class="type-2" type="submit" value="upload" name="upload">Upload</button>
-                </div>
-            </form>
-
-            <hr>
-
-            <div class="as">
-
-                <form method="POST">
-                    {% csrf_token %}
-                    <h4>Seller Invoice</h4>
-                    <div class="link">
-                        <input class="type-1" type="file" accept=".jpg,.pdf" name="file" multiple>
-                        <button class="type-2" type="submit" value="upload" name="upload">Upload</button>
-                    </div>
-                </form>
-
-                <form method="POST">
-                    {% csrf_token %}
-                    <h4>Purchase Invoice</h4>
-                    <div class="link">
-                        <input class="type-1" type="file" accept=".jpg,.pdf" name="file" multiple>
-                        <button class="type-2" type="submit" value="upload" name="upload">Upload</button>
-                    </div>
-                </form>
-
-            </div>
-        </div>
-        <!-- for sendind data -->
-        <h3>Select file to Send</h3>
-        <div class="data">
-            <form method="POST">
-                {% csrf_token %}
-                <ul>
-                    <li>
-                        
-                        <div class="form-group">
-                            <input class="type-1" type="email" name="received_from"
-                                placeholder="Enter Reciever Email Id" required="required">
-                        </div>
-                    </li>
-                    <li>
-                        <select class="type-1" name="ofile" required="required">
-                           
-                        </select>
-                    </li>
-                    <li>
-                        <input class="type-2" type="submit" value="send" name="send">
-                    </li>
-                </ul>
+                <input class="type-2" type="text" name="comp" placeholder="Write your complaint here">
+                <input class="type-2" type="button" name="submit" value="Submit">
             </form>
         </div>
 
-        <h3>Received Data</h3>
-        <div class="data">
-            <div class="row">
-                <div class="column1">
-                    <h2>My Data</h2>
-                    <table>
-                        <tr>
-                            <th>Files</th>
-                            <!-- <th>My Data</th> -->
-                        </tr>
-                      
-                    </table>
-                </div>
 
-                <div class="column2">
-                    <h2>Received Data</h2>
-                    <table>
-                        <tr>
-                            <th>Files</th>
-                            <th>Received From</th>
-                        </tr>
-                       
-                    </table>
-                </div>
+        <!-- viewing applications -->
+        <div class="data">
+            <div class="column">
+                <h2>Applications</h2>
+                <table>
+                    <tr>
+                        <th>Received Application</th>
+                        <th>Status</th>
+                    </tr>
+                </table>
             </div>
         </div>
 
