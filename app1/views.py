@@ -78,7 +78,7 @@ def dashboard(request):
         print(f"{name} is {student}")
         print(type(student))
         
-        if request.POST == 'details': 
+        if request.POST: 
             # saving data in database
             data = studentData()
             data.name = request.POST['name']
@@ -92,6 +92,7 @@ def dashboard(request):
             data.pl = request.POST['pl']
             data.description = request.POST['description']
             data.save()
+            print("Data Successfully Submitted")
             return HttpResponse("Data Successfully Submitted")
         
         details = studentData.objects.all()
