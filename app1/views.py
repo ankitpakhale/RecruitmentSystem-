@@ -45,7 +45,7 @@ def SignupView(request):
                     v.isStu = Category
                 v.save()
                 print(f"{v.name} Signed up successfully")
-                return redirect('LOGIN')
+                return redirect('app1:LOGIN')
             else:
                 msg = 'Please Enter Same Password'
                 return render(request , 'signup.html',{'msg':msg}) 
@@ -64,7 +64,7 @@ def userLogin(request):
         if check.password == pass1:
             request.session['email'] = check.email
             print(f'{check.name} Successfully logged in')
-            return redirect('DASHBOARD')
+            return redirect('app1:DASHBOARD')
         else:
             return HttpResponse('Invalid Password')
     return render(request,'login.html')
@@ -107,12 +107,12 @@ def dashboard(request):
             q = details
         print(q)
         return render(request,'dashboard.html', {'name': name, 'student': student, 'details': details, 's':q})
-    return redirect('LOGIN')
+    return redirect('app1:LOGIN')
 
 def userLogOut(request):
     del request.session['email']
     print('User logged out successfully')
-    return redirect('LOGIN')
+    return redirect('app1:LOGIN')
 
 
 def home(request):
