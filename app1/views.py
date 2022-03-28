@@ -113,3 +113,10 @@ def userLogOut(request):
     del request.session['email']
     print('User logged out successfully')
     return redirect('LOGIN')
+
+
+def home(request):
+    return render(request,'index3.html')
+
+def compDetails(request):
+    return render(request,'company-detail.html')
