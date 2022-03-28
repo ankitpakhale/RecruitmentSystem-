@@ -188,7 +188,8 @@ def jobDetails(request):
     return render(request,'job-detail.html')
 
 def jobListing(request):
-    return render(request,'job-listing.html')
+    obj = studentData.objects.all()
+    return render(request,'job-listing.html', {'obj': obj})
 
 def login1(request):
     return render(request,'login1.html')
