@@ -37,7 +37,7 @@
   <div class="header">
     <div class="container">
       <div class="row">
-        <div class="col-md-2 col-sm-3 col-xs-12"> <a href=" {% url 'HOME' %} " class="logo"><img src=" {% static 'images/logo.png' %}' "
+        <div class="col-md-2 col-sm-3 col-xs-12"> <a href=" {% url 'app1:HOME' %} " class="logo"><img src=" {% static 'images/logo.png' %}' "
               alt="" /></a>
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span
@@ -51,38 +51,38 @@
           <div class="navbar navbar-default" role="navigation">
             <div class="navbar-collapse collapse" id="nav-main">
               <ul class="nav navbar-nav">
-                <li class="dropdown active"><a href=" {% url 'HOME' %} ">Home <span class="caret"></span></a></li>
-                <li><a href=" {% url 'ABOUT' %} ">About us</a></li>
+                <li class="dropdown active"><a href=" {% url 'app1:HOME' %} ">Home <span class="caret"></span></a></li>
+                <li><a href=" {% url 'app1:ABOUT' %} ">About us</a></li>
                 <li class="dropdown"><a href=" {% static '#.' %} ">Pages <span class="caret"></span></a>
                   <!-- dropdown start -->
                   <ul class="dropdown-menu">
-                    <li><a href=" {% url 'LOGIN1' %} ">Login</a></li>
-                    <li><a href=" {% url 'REGISTER' %} ">Register</a></li>
-                    <li><a href=" {% url 'JOBLISTING' %} ">Job Listing</a></li>
-                    <li><a href=" {% url 'JOBDETAILS' %} ">Job Detail</a></li>
-                    <li><a href=" {% url 'CANDIDATELISTING' %} ">Candidate Listing</a></li>
-                    <li><a href=" {% url 'CANDIDATEDETAILS' %} ">Candidate Detail</a></li>
-                    <li><a href=" {% url 'COMPDETAILS' %} ">Company Profile</a></li>
-                    <li><a href=" {% url 'EDITPROFILE' %} ">Edit Profile</a></li>
-                    <li><a href=" {% url 'POSTJOB' %} ">Post a Job</a></li>
-                    <li><a href=" {% url 'PACKAGES' %} ">Packages</a></li>
-                    <li><a href=" {% url 'FAQS' %} ">FAQs</a></li>
-                    <li><a href=" {% url 'NOTFOUND' %} ">404 Page</a></li>
-                    <li><a href=" {% url 'TYPOGRAPHY' %} ">Typography</a></li>
+                    <li><a href=" {% url 'app1:LOGIN1' %} ">Login</a></li>
+                    <li><a href=" {% url 'app1:REGISTER' %} ">Register</a></li>
+                    <li><a href=" {% url 'app1:JOBLISTING' %} ">Job Listing</a></li>
+                    <li><a href=" {% url 'app1:JOBDETAILS' %} ">Job Detail</a></li>
+                    <li><a href=" {% url 'app1:CANDIDATELISTING' %} ">Candidate Listing</a></li>
+                    <li><a href=" {% url 'app1:CANDIDATEDETAILS' %} ">Candidate Detail</a></li>
+                    <li><a href=" {% url 'app1:COMPDETAILS' %} ">Company Profile</a></li>
+                    <li><a href=" {% url 'app1:EDITPROFILE' %} ">Edit Profile</a></li>
+                    <li><a href=" {% url 'app1:POSTJOB' %} ">Post a Job</a></li>
+                    <li><a href=" {% url 'app1:PACKAGES' %} ">Packages</a></li>
+                    <li><a href=" {% url 'app1:FAQS' %} ">FAQs</a></li>
+                    <li><a href=" {% url 'app1:NOTFOUND' %} ">404 Page</a></li>
+                    <li><a href=" {% url 'app1:TYPOGRAPHY' %} ">Typography</a></li>
                   </ul>
                   <!-- dropdown end -->
                 </li>
-                <li class="dropdown"><a href=" {% url 'BLOG' %} ">Blog <span class="caret"></span></a>
+                <li class="dropdown"><a href=" {% url 'app1:BLOG' %} ">Blog <span class="caret"></span></a>
                   <!-- dropdown start -->
                   <ul class="dropdown-menu">
                     <!-- <li><a href=" {% static 'blog-detail.html' %} ">Blog Detail</a></li> -->
-                    <li><a href=" {% url 'BLOGFULL' %} ">Blog Grid Full Width</a></li>
+                    <li><a href=" {% url 'app1:BLOGFULL' %} ">Blog Grid Full Width</a></li>
                   </ul>
                   <!-- dropdown end -->
                 </li>
-                <li><a href=" {% url 'CONTACT' %} ">Contact</a></li>
-                <li class="postjob"><a href=" {% url 'POSTJOB' %} ">Post a job</a></li>
-                <li class="jobseeker"><a href=" {% url 'CANDIDATELISTING' %} ">Job Seeker</a></li>
+                <li><a href=" {% url 'app1:CONTACT' %} ">Contact</a></li>
+                <li class="postjob"><a href=" {% url 'app1:POSTJOB' %} ">Post a job</a></li>
+                <li class="jobseeker"><a href=" {% url 'app1:CANDIDATELISTING' %} ">Job Seeker</a></li>
               </ul>
               <!-- Nav collapes end -->
             </div>
@@ -216,52 +216,52 @@
       <ul class="employerList">
         <!--employer-->
         <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a
-            href=" {% url 'app1:CD' %} "><img src="{% static 'images/employers/emplogo1.jpg' %} " alt="Company Name" /></a></li>
+            href=" {% url 'app1:CANDIDATEDETAILS' %} "><img src="{% static 'images/employers/emplogo1.jpg' %} " alt="Company Name" /></a></li>
         <!--employer-->
         <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a
-            href=" {% url 'app1:CD' %} "><img src=" {% static 'images/employers/emplogo2.jpg' %} " alt="Company Name" /></a></li>
+            href=" {% url 'app1:CANDIDATEDETAILS' %} "><img src=" {% static 'images/employers/emplogo2.jpg' %} " alt="Company Name" /></a></li>
         <!--employer-->
         <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a
-            href=" {% url 'app1:CD' %} "><img src=" {% static 'images/employers/emplogo3.jpg' %} " alt="Company Name" /></a></li>
+            href=" {% url 'app1:CANDIDATEDETAILS' %} "><img src=" {% static 'images/employers/emplogo3.jpg' %} " alt="Company Name" /></a></li>
         <!--employer-->
         <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a
-            href=" {% url 'app1:CD' %} "><img src=" {% static 'images/employers/emplogo4.jpg' %} " alt="Company Name" /></a></li>
+            href=" {% url 'app1:CANDIDATEDETAILS' %} "><img src=" {% static 'images/employers/emplogo4.jpg' %} " alt="Company Name" /></a></li>
         <!--employer-->
         <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a
-            href=" {% url 'app1:CD' %} "><img src=" {% static 'images/employers/emplogo5.jpg' %} " alt="Company Name" /></a></li>
+            href=" {% url 'app1:CANDIDATEDETAILS' %} "><img src=" {% static 'images/employers/emplogo5.jpg' %} " alt="Company Name" /></a></li>
         <!--employer-->
         <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a
-            href=" {% url 'app1:CD' %} "><img src=" {% static 'images/employers/emplogo6.jpg' %} " alt="Company Name" /></a></li>
+            href=" {% url 'app1:CANDIDATEDETAILS' %} "><img src=" {% static 'images/employers/emplogo6.jpg' %} " alt="Company Name" /></a></li>
         <!--employer-->
         <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a
-            href=" {% url 'app1:CD' %} "><img src=" {% static 'images/employers/emplogo7.jpg' %} " alt="Company Name" /></a></li>
+            href=" {% url 'app1:CANDIDATEDETAILS' %} "><img src=" {% static 'images/employers/emplogo7.jpg' %} " alt="Company Name" /></a></li>
         <!--employer-->
         <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a
-            href=" {% url 'app1:CD' %} "><img src=" {% static 'images/employers/emplogo8.jpg' %} " alt="Company Name" /></a></li>
+            href=" {% url 'app1:CANDIDATEDETAILS' %} "><img src=" {% static 'images/employers/emplogo8.jpg' %} " alt="Company Name" /></a></li>
         <!--employer-->
         <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a
-            href=" {% url 'app1:CD' %} "><img src=" {% static 'images/employers/emplogo9.jpg' %} " alt="Company Name" /></a></li>
+            href=" {% url 'app1:CANDIDATEDETAILS' %} "><img src=" {% static 'images/employers/emplogo9.jpg' %} " alt="Company Name" /></a></li>
         <!--employer-->
         <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a
-            href=" {% url 'app1:CD' %} "><img src=" {% static 'images/employers/emplogo10.jpg' %} " alt="Company Name" /></a></li>
+            href=" {% url 'app1:CANDIDATEDETAILS' %} "><img src=" {% static 'images/employers/emplogo10.jpg' %} " alt="Company Name" /></a></li>
         <!--employer-->
         <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a
-            href=" {% url 'app1:CD' %} "><img src=" {% static 'images/employers/emplogo11.jpg' %} " alt="Company Name" /></a></li>
+            href=" {% url 'app1:CANDIDATEDETAILS' %} "><img src=" {% static 'images/employers/emplogo11.jpg' %} " alt="Company Name" /></a></li>
         <!--employer-->
         <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a
-            href=" {% url 'app1:CD' %} "><img src=" {% static 'images/employers/emplogo12.jpg' %} " alt="Company Name" /></a></li>
+            href=" {% url 'app1:CANDIDATEDETAILS' %} "><img src=" {% static 'images/employers/emplogo12.jpg' %} " alt="Company Name" /></a></li>
         <!--employer-->
         <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a
-            href=" {% url 'app1:CD' %} "><img src=" {% static 'images/employers/emplogo13.jpg' %} " alt="Company Name" /></a></li>
+            href=" {% url 'app1:CANDIDATEDETAILS' %} "><img src=" {% static 'images/employers/emplogo13.jpg' %} " alt="Company Name" /></a></li>
         <!--employer-->
         <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a
-            href=" {% url 'app1:CD' %} "><img src=" {% static 'images/employers/emplogo14.jpg' %} " alt="Company Name" /></a></li>
+            href=" {% url 'app1:CANDIDATEDETAILS' %} "><img src=" {% static 'images/employers/emplogo14.jpg' %} " alt="Company Name" /></a></li>
         <!--employer-->
         <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a
-            href=" {% url 'app1:CD' %} "><img src=" {% static 'images/employers/emplogo15.jpg' %} " alt="Company Name" /></a></li>
+            href=" {% url 'app1:CANDIDATEDETAILS' %} "><img src=" {% static 'images/employers/emplogo15.jpg' %} " alt="Company Name" /></a></li>
         <!--employer-->
         <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a
-            href=" {% url 'app1:CD' %} "><img src=" {% static 'images/employers/emplogo16.jpg' %} " alt="Company Name" /></a></li>
+            href=" {% url 'app1:CANDIDATEDETAILS' %} "><img src=" {% static 'images/employers/emplogo16.jpg' %} " alt="Company Name" /></a></li>
       </ul>
     </div>
   </div>
