@@ -1,6 +1,7 @@
 from django.urls import path
 from . import views
 
+
 app_name = 'app1'
 
 urlpatterns = [
@@ -12,5 +13,5 @@ urlpatterns = [
     path('logout/', views.userLogOut, name='LOGOUT'), 
     
     path('home/', views.home, name='HOME'), 
-    path('compdetails/', views.compDetails, name='COMPDETAILS'), 
+    path('compdetails/', views.compDetails, name='CD'), 
 ]
