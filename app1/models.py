@@ -1,3 +1,4 @@
+from turtle import mode
 from unicodedata import name
 from django.db import models
 
@@ -25,6 +26,16 @@ class studentData(models.Model):
     spi = models.PositiveIntegerField(default='')
     pl = models.CharField(max_length=30)
     description = models.CharField(default='', max_length=30)
+    
+    def __str__(self):
+        return self.name
+
+
+class ContactForm(models.Model):
+    name = models.CharField(max_length=30, default='')
+    number = models.PositiveIntegerField(default='')
+    email = models.EmailField(default='')
+    details = models.CharField(max_length=1000, default='')
     
     def __str__(self):
         return self.name

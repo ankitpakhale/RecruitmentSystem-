@@ -4,3 +4,4 @@ from .models import *
 
 admin.site.register(signUp)
 admin.site.register(studentData)
+admin.site.register(ContactForm)

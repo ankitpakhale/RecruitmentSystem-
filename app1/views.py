@@ -137,7 +137,29 @@ def blog(request):
     return render(request,'blog.html')
 
 def candidateDetails(request):
-    return render(request,'candidate-detail.html')
+    key = ''
+    if 'email' in request.session:
+        
+        if request.POST: 
+            # saving data in database
+            data = studentData()
+            data.name = request.POST['name']
+            data.email = request.POST['email']
+            data.city = request.POST['city']
+            data.dob = request.POST['dob']
+            data.uname = request.POST['uname']
+            data.cname = request.POST['cname']
+            data.pyear = request.POST['pyear']
+            data.spi = request.POST['spi']
+            data.pl = request.POST['pl']
+            data.description = request.POST['description']
+            data.save()
+            key = "Data Successfully Submitted"
+            print(key)
+        # search module start
+        print("Inside search module")
+        return render(request,'candidate-detail.html', {'key': key})
+    return redirect('app1:LOGIN')
 
 def candidateListing(request):
     return render(request,'candidate-listing.html')
@@ -146,7 +168,12 @@ def companyDetails(request):
     return render(request,'company-detail.html')
 
 def contact(request):
-    return render(request,'contact-us.html')
+    key = ''
+    if request.method == 'POST':
+        db = ContactForm(name = request.POST.get('name'), phone = request.POST.get('phone') ,email = request.POST.get('email'), details = request.POST.get('details'))
+        db.save()
+        key = "Your Message has been sent successfully"
+    return render(request,'contact-us.html', {'key': key})
 
 def dashboard1(request):
     return render(request,'dashboard1.html')

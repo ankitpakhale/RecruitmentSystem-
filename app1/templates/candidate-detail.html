@@ -96,341 +96,95 @@
     <!-- Header container end -->
   </div>
   <!-- Header end -->
+<!-- ------------------------------------------------------------------------------------------------------------ -->
 
-<!-- Page Title start -->
-<div class="pageTitle">
+
+<div class="inner-page">
   <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-sm-6">
-        <h1 class="page-heading">Candidate Detail</h1>
-      </div>
-      <div class="col-md-6 col-sm-6">
-        <div class="breadCrumb"><a href=" {% static '#.' %} ">Home</a> / <span>Candidate Name</span></div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Page Title End -->
-
-<div class="listpgWraper">
-  <div class="container"> 
-    
-    <!-- Job Header start -->
-    <div class="job-header">
-      <div class="jobinfo">
-        <div class="row">
-          <div class="col-md-8 col-sm-8"> 
-            <!-- Candidate Info -->
-            <div class="candidateinfo">
-              <div class="userPic"><img src=" {% static 'images/candidates/01.jpg' %} " alt=""></div>
-              <div class="title">Elliot Scott</div>
-              <div class="desi">Senior Data Analytist</div>
-              <div class="loctext"><i class="fa fa-history" aria-hidden="true"></i> Member Since, Aug 14, 2016</div>
-              <div class="loctext"><i class="fa fa-map-marker" aria-hidden="true"></i> 123 Boscobel Street, NW8 8PS</div>
-              <div class="clearfix"></div>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-4"> 
-            <!-- Candidate Contact -->
-            <div class="candidateinfo">
-              <div class="loctext"><i class="fa fa-phone" aria-hidden="true"></i> (+1) 123.456.7890</div>
-              <div class="loctext"><i class="fa fa-envelope" aria-hidden="true"></i> info@mywebsite.com</div>
-              <div class="loctext"><i class="fa fa-globe" aria-hidden="true"></i> www.mywebsite.com</div>
-              <div class="cadsocial"> <a href="http://www.twitter.com/" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a> <a href="http://www.plus.google.com/" target="_blank"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a> <a href="http://www.facebook.com/" target="_blank"> <i class="fa fa-facebook-square" aria-hidden="true"></i></a> <a href="https://www.pinterest.com/" target="_blank"><i class="fa fa-pinterest-square" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a> </div>
-            </div>
+    <div class="contact-wrap">
+      <div class="row">
+        <div class="col-md-12 column">
+            <h2>Fill this Application Form</h2>
+            <p>Vestibulum at magna tellus. Vivamus sagittis nunc aliquet. Vivamin orci aliquam<br>
+              eros vel saphicula. Donec eget ultricies ipsmconsequat.</p>
           </div>
         </div>
-      </div>
+        
       
-      <!-- Buttons -->
-      <div class="jobButtons"> <a href=" {% static '#.' %} " class="btn apply"><i class="fa fa-paper-plane" aria-hidden="true"></i> Hire Me</a> <a href="#." class="btn"><i class="fa fa-download" aria-hidden="true"></i> Download CV</a> <a href="#." class="btn"><i class="fa fa-envelope" aria-hidden="true"></i> Send Message</a> <a href="#." class="btn"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save User</a> <a href="#." class="btn report"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Report Abuse</a> </div>
-    </div>
-    
-    <!-- Job Detail start -->
-    <div class="row">
-      <div class="col-md-8"> 
-        <!-- About Employee start -->
-        <div class="job-header">
-          <div class="contentbox">
-            <h3>About me</h3>
-            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque massa vel lorem fermentum fringilla. Pellentesque id est et neque blandit ornare malesuada a mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis, quam a fringilla congue, turpis turpis molestie ligula, ut laoreet elit arcu sed nulla. Sed at quam commodo, egestas turpis eget, fringilla dui. Etiam sit amet nulla metus. Etiam iaculis lobortis ultricies. <strong>Maecenas maximus magna a metus consectetur, vel fermentum nisl ultrices</strong>. Quisque eget ante id dui posuere ullamcorper ut molestie eros. Aliquam ultrices lacinia risus, at lacinia ante vehicula id. Nulla in lectus dignissim, egestas purus sit amet, mattis libero. Maecenas ullamcorper rutrum porta. </p>
-            <ul>
-              <li>In non augue eget purus placerat aliquet sit amet lobortis lacus.</li>
-              <li>Curabitur interdum nisl quis placerat ornare.</li>
-              <li>Curabitur ornare enim ac aliquam efficitur.</li>
-              <li>Etiam volutpat leo et orci luctus, blandit accumsan arcu placerat.</li>
-              <li>Proin egestas dui et pulvinar pellentesque.</li>
-              <li>In ultricies nulla eget lacus tempor lobortis.</li>
-            </ul>
+        <div class="col-md-12 column">
+          <div class="contact-form">
+            <div id="message"></div>
+            <form method="POST" action="#" name="contactform" id="contactform">
+              {% csrf_token %}
+              <div class="row">
+                <div class="col-md-6">
+                  <input required="required" name="name" type="text" id="name" placeholder="Full Name">
+                </div>
+                <div class="col-md-6">
+                  <input required="required" type="text" name="email" placeholder="Email Address">
+                </div>
+                <div class="col-md-6">
+                  <input required="required" name="city" type="text" id="name" placeholder="City">
+                </div>
+                <div class="col-md-6">
+                  <input required="required" type="date" name="dob" placeholder="Date of birth">
+                </div>
+                <div class="col-md-6">
+                  <input required="required" name="uname" type="text" id="name" placeholder="University Name">
+                </div>
+                <div class="col-md-6">
+                  <input required="required" type="text" name="cname" placeholder="College Name">
+                </div>
+                <div class="col-md-12">
+                  <input required="required" name="pyear" type="number" id="email" placeholder="Pass out Year">
+                </div>
+                <div class="col-md-6">
+                  <input required="required" type="number" name="spi" placeholder="Total SPI">
+                </div>
+           
+                <div class="col-md-6">
+                  <div class="formrow">
+                    <select class="form-control" name="pl" required="required">
+                      <option value="" disabled selected hidden>Select Programming Language</option>
+                      <option value="Python">Python</option>
+                      <option value="Java">Java</option>
+                      <option value="JavaScripts">JavaScripts</option>
+                      <option value="Kotlin">Kotlin</option>
+                      <option value="PHP">PHP</option>
+                      <option value="Ruby">Ruby</option>
+                    </select>
+                  </div>
+                </div>
+
+
+                <div class="col-md-12">
+                  <textarea rows="4" name="description" id="comments" placeholder="Write Project Description here"></textarea>
+                </div>
+
+                <div class="col-md-12">
+                  <input style="background-color: #263BD6; color: #fff" class="button" type="submit" id="submit" value="Submit Now">
+                </div>
+               
+              </div>
+            </form>
           </div>
         </div>
-        
-        <!-- Education start -->
-        <div class="job-header">
-          <div class="contentbox">
-            <h3>Education</h3>
-            <ul class="educationList">
-              <li>
-                <div class="date">31<br>
-                  May<br>
-                  2012</div>
-                <h4>Masters Degree</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque massa vel lorem fermentum fringilla. Pellentesque id est et neque blandit ornare malesuada a mauris.</p>
-                <div class="clearfix"></div>
-              </li>
-              <li>
-                <div class="date">31<br>
-                  May<br>
-                  2012</div>
-                <h4>Masters Degree</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque massa vel lorem fermentum fringilla. Pellentesque id est et neque blandit ornare malesuada a mauris.</p>
-                <div class="clearfix"></div>
-              </li>
-              <li>
-                <div class="date">31<br>
-                  May<br>
-                  2012</div>
-                <h4>Masters Degree</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque massa vel lorem fermentum fringilla. Pellentesque id est et neque blandit ornare malesuada a mauris.</p>
-                <div class="clearfix"></div>
-              </li>
-            </ul>
-          </div>
-        </div>
-        
-        <!-- Experience start -->
-        <div class="job-header">
-          <div class="contentbox">
-            <h3>Experience</h3>
-            <ul class="experienceList">
-              <li>
-                <div class="row">
-                  <div class="col-md-2"><img src=" {% static 'images/employers/emplogo1.jpg' %} " alt="your alt text"></div>
-                  <div class="col-md-10">
-                    <h4>Company Name</h4>
-                    <div class="row">
-                      <div class="col-md-6">www.companywebsite.com</div>
-                      <div class="col-md-6">From 2014 - Present</div>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque massa vel lorem fermentum fringilla. Pellentesque id est et neque blandit ornare</p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="row">
-                  <div class="col-md-2"><img src=" {% static 'images/employers/emplogo1.jpg' %} " alt="your alt text"></div>
-                  <div class="col-md-10">
-                    <h4>Company Name</h4>
-                    <div class="row">
-                      <div class="col-md-6">www.companywebsite.com</div>
-                      <div class="col-md-6">From 2014 - Present</div>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque massa vel lorem fermentum fringilla. Pellentesque id est et neque blandit ornare</p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="row">
-                  <div class="col-md-2"><img src=" {% static 'images/employers/emplogo1.jpg' %} " alt="your alt text"></div>
-                  <div class="col-md-10">
-                    <h4>Company Name</h4>
-                    <div class="row">
-                      <div class="col-md-6">www.companywebsite.com</div>
-                      <div class="col-md-6">From 2014 - Present</div>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque massa vel lorem fermentum fringilla. Pellentesque id est et neque blandit ornare</p>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-        
-        <!-- Portfolio start -->
-        <div class="job-header">
-          <div class="contentbox">
-            <h3>Portfolio</h3>
-            <ul class="row userPortfolio">
-              <li class="col-md-6 col-sm-6">
-                <div class="imgbox"><img src=" {% static 'images/portfolio/portfolio-img1.jpg' %} " alt="your alt text">
-                  <div class="itemHover">
-                    <div class="zoombox"><a href="#" title="images/portfolio/portfolio-img1" class="item-zoom fancybox-effects-a"><i class="fa fa-search" aria-hidden="true"></i></a> <a href="#" rel="nofollow" class="item-zoom" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a> </div>
-                    <div class="infoItem">
-                      <div class="itemtitle">
-                        <h5>Title Here</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="col-md-6 col-sm-6">
-                <div class="imgbox"><img src=" {% static 'images/portfolio/portfolio-img2.jpg' %} " alt="your alt text">
-                  <div class="itemHover">
-                    <div class="zoombox"><a href="#" title="images/portfolio/portfolio-img2" class="item-zoom fancybox-effects-a"><i class="fa fa-search" aria-hidden="true"></i></a> <a href="#" rel="nofollow" class="item-zoom" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a> </div>
-                    <div class="infoItem">
-                      <div class="itemtitle">
-                        <h5>Title Here</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="col-md-6 col-sm-6">
-                <div class="imgbox"><img src=" {% static 'images/portfolio/portfolio-img3.jpg' %} " alt="your alt text">
-                  <div class="itemHover">
-                    <div class="zoombox"><a href="#" title="images/portfolio/portfolio-img3" class="item-zoom fancybox-effects-a"><i class="fa fa-search" aria-hidden="true"></i></a> <a href="#" rel="nofollow" class="item-zoom" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a> </div>
-                    <div class="infoItem">
-                      <div class="itemtitle">
-                        <h5>Title Here</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="col-md-6 col-sm-6">
-                <div class="imgbox"><img src=" {% static 'images/portfolio/portfolio-img4.jpg' %} " alt="your alt text">
-                  <div class="itemHover">
-                    <div class="zoombox"><a href="#" title="images/portfolio/portfolio-img4" class="item-zoom fancybox-effects-a"><i class="fa fa-search" aria-hidden="true"></i></a> <a href="#" rel="nofollow" class="item-zoom" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a> </div>
-                    <div class="infoItem">
-                      <div class="itemtitle">
-                        <h5>Title Here</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="col-md-6 col-sm-6">
-                <div class="imgbox"><img src=" {% static 'images/portfolio/portfolio-img5.jpg' %} " alt="your alt text">
-                  <div class="itemHover">
-                    <div class="zoombox"><a href="#" title="images/portfolio/portfolio-img5" class="item-zoom fancybox-effects-a"><i class="fa fa-search" aria-hidden="true"></i></a> <a href="#" rel="nofollow" class="item-zoom" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a> </div>
-                    <div class="infoItem">
-                      <div class="itemtitle">
-                        <h5>Title Here</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="col-md-6 col-sm-6">
-                <div class="imgbox"><img src=" {% static 'images/portfolio/portfolio-img6.jpg' %} " alt="your alt text">
-                  <div class="itemHover">
-                    <div class="zoombox"><a href="#" title="images/portfolio/portfolio-img6" class="item-zoom fancybox-effects-a"><i class="fa fa-search" aria-hidden="true"></i></a> <a href="#" rel="nofollow" class="item-zoom" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a> </div>
-                    <div class="infoItem">
-                      <div class="itemtitle">
-                        <h5>Title Here</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4"> 
-        <!-- Candidate Detail start -->
-        <div class="job-header">
-          <div class="jobdetail">
-            <h3>Candidate Detail</h3>
-            <ul class="jbdetail">
-              <li class="row">
-                <div class="col-md-6 col-xs-6">Experience</div>
-                <div class="col-md-6 col-xs-6"><span>5 Years</span></div>
-              </li>
-              <li class="row">
-                <div class="col-md-6 col-xs-6">Age</div>
-                <div class="col-md-6 col-xs-6"><span>28 Years</span></div>
-              </li>
-              <li class="row">
-                <div class="col-md-6 col-xs-6">Current Salary($)</div>
-                <div class="col-md-6 col-xs-6"><span class="permanent">10K - 12K</span></div>
-              </li>
-              <li class="row">
-                <div class="col-md-6 col-xs-6">Expected Salary($)</div>
-                <div class="col-md-6 col-xs-6"><span class="freelance">14K - 18K</span></div>
-              </li>
-              <li class="row">
-                <div class="col-md-6 col-xs-6">Education Levels</div>
-                <div class="col-md-6 col-xs-6"><span>Masters</span></div>
-              </li>
-            </ul>
-          </div>
-        </div>
-        
-        <!-- Google Map start -->
-        <div class="job-header">
-          <div class="jobdetail">
-            <h3>Skills</h3>
-            <div class="skillswrap"> 
-              <!-- Skill -->
-              <h5>Photoshop</h5>
-              <div class="progress">
-                <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 90%"> <span>90%</span> </div>
-              </div>
-              <!-- Skill -->
-              <h5>HTML5</h5>
-              <div class="progress">
-                <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 85%"> <span>85%</span> </div>
-              </div>
-              <!-- Skill -->
-              <h5>Jquery</h5>
-              <div class="progress">
-                <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 90%"> <span>90%</span> </div>
-              </div>
-              <!-- Skill -->
-              <h5>Wordpress</h5>
-              <div class="progress">
-                <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 60%"> <span>60%</span> </div>
-              </div>
-              <!-- Skill -->
-              <h5>PHP</h5>
-              <div class="progress">
-                <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:35%"> <span>35%</span> </div>
-              </div>
-              <!-- Skill -->
-              <h5>Javascript</h5>
-              <div class="progress">
-                <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 95%"> <span>95%</span> </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Contact Company start -->
-        <div class="job-header">
-          <div class="jobdetail">
-            <h3>Contact Elliot Scott</h3>
-            <div class="formpanel">
-              <div class="formrow">
-                <input type="text" class="form-control" placeholder="Your Name">
-              </div>
-              <div class="formrow">
-                <input type="text" class="form-control" placeholder="Your Email">
-              </div>
-              <div class="formrow">
-                <input type="text" class="form-control" placeholder="Phone">
-              </div>
-              <div class="formrow">
-                <input type="text" class="form-control" placeholder="Subject">
-              </div>
-              <div class="formrow">
-                <textarea class="form-control" placeholder="Message"></textarea>
-              </div>
-              <input type="submit" class="btn" value="Submit">
-            </div>
-          </div>
-        </div>
+
+
       </div>
     </div>
   </div>
 </div>
 
+
+<!-- --------------KEY PASSING--------------------- -->
+{% if key %}    
+  <script>alert('{{key}}')</script>
+{% endif %}
+
+<!-- ----------------------------------- -->
+
+<!-- ------------------------------------------------------------------------------------------------------------ -->
 <!--Footer-->
 <div class="footerWrap">
   <div class="container">
