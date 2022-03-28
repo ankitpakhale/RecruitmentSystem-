@@ -1,95 +1,105 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- Mirrored from www.sharjeelanjum.com/html/jobs-portal/demo/edit-profile.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Mar 2022 15:17:49 GMT -->
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Online Job Portal HTML</title>
-<!-- Fav Icon -->
-<link rel="shortcut icon" href=" {% static 'favicon.ico' %} ">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Online Job Portal HTML</title>
 
-<!-- Owl carousel -->
-<link href=" {% static 'css/owl.carousel.css' %} " rel="stylesheet">
+  <!-- Fav Icon -->
+  <link rel="shortcut icon" href="{% static 'images/favicon.ico' %} ">
 
-<!-- Bootstrap -->
-<link href=" {% static 'css/bootstrap.min.css' %} " rel="stylesheet">
+  <!-- Slider -->
+  <link href=" {% static 'js/revolution-slider/css/settings.css' %} " rel="stylesheet">
 
-<!-- Font Awesome -->
-<link href=" {% static 'css/font-awesome.css' %} " rel="stylesheet">
+  <!-- Owl carousel -->
+  <link href=" {% static 'css/owl.carousel.css' %} " rel="stylesheet">
 
-<!-- Custom Style -->
-<link href=" {% static 'css/main.css' %} " rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href=" {% static 'css/bootstrap.min.css' %} " rel="stylesheet">
 
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-<!--[if lt IE 9]>
+  <!-- Font Awesome -->
+  <link href=" {% static 'css/font-awesome.css' %} " rel="stylesheet">
+
+  <!-- Custom Style -->
+  <link href=" {% static 'css/main.css' %} " rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
   <script src=" {% static 'js/html5shiv.min.js' %} "></script>
   <script src=" {% static 'js/respond.min.js' %} "></script>
 <![endif]-->
 
 </head>
 <body>
-<!-- Header start -->
-<div class="header">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-2 col-sm-3 col-xs-12"> <a href=" {% static 'index.html' %} " class="logo"><img src=" {% static 'images/logo.png' %} " alt="" /></a>
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-        </div>
-        <div class="clearfix"></div>
-      </div>
-      <div class="col-md-10 col-sm-12 col-xs-12">
-        <div class="navbar navbar-default" role="navigation">
-          <div class="navbar-collapse collapse" id="nav-main">
-            <ul class="nav navbar-nav">
-              <li class="dropdown"><a href=" {% static 'index.html' %} ">Home <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href=" {% static 'index.html' %} ">Home Static Image</a></li>
-                  <li><a href=" {% static 'index2.html' %} ">Home With Map</a></li>
-                  <li><a href=" {% static 'index3.html' %} ">Home With Slider</a></li>
-                </ul>
-              </li>
-              <li><a href=" {% static 'about-us.html' %} ">About us</a></li>
-              <li class="dropdown active"><a href=" {% static '#.' %} ">Pages <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href=" {% static 'about-us.html' %} ">About Us</a></li>
-                  <li><a href=" {% static 'login.html' %} ">Login</a></li>
-                  <li><a href=" {% static 'register.html' %} ">Register</a></li>
-                  <li><a href=" {% static 'job-listing.html' %} ">Job Listing</a></li>
-                  <li><a href=" {% static 'job-detail.html' %} ">Job Detail</a></li>
-                  <li><a href=" {% static 'candidate-listing.html' %} ">Candidate Listing</a></li>
-                  <li><a href=" {% static 'candidate-detail.html' %} ">Candidate Detail</a></li>
-                  <li><a href=" {% static 'company-detail.html' %} ">Company Profile</a></li>
-                  <li class="active"><a href=" {% static 'edit-profile.html' %} ">Edit Profile</a></li>
-                  <li><a href=" {% static 'post-job.html' %} ">Post a Job</a></li>
-                  <li><a href=" {% static 'packages.html' %} ">Packages</a></li>
-                  <li><a href=" {% static 'faqs.html' %} ">FAQs</a></li>
-                  <li><a href=" {% static '404.html' %} ">404 Page</a></li>
-                  <li><a href=" {% static 'typography.html' %} ">Typography</a></li>
-                </ul>
-              </li>
-              <li class="dropdown"><a href=" {% static 'blog.html' %} ">Blog <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href=" {% static 'blog.html' %} ">Blog List</a></li>
-                  <li><a href=" {% static 'blog-detail.html' %} ">Blog Detail</a></li>
-                  <li><a href=" {% static 'blog-grid.html' %} ">Blog Grid</a></li>
-                  <li><a href=" {% static 'blog-full-width.html' %} ">Blog Grid Full Width</a></li>
-                </ul>
-              </li>
-              <li><a href=" {% static 'contact-us.html' %} ">Contact</a></li>
-              <li class="postjob"><a href=" {% static 'post-job.html' %} ">Post a job</a></li>
-              <li class="jobseeker"><a href=" {% static 'candidate-listing.html' %} ">Job Seeker</a></li>
-            </ul>
+  <!-- Header start -->
+  <div class="header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2 col-sm-3 col-xs-12"> <a href=" {% url 'app1:HOME' %} " class="logo"><img src=" {% static 'images/logo.png' %}' "
+              alt="" /></a>
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span
+                class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+              <span class="icon-bar"></span> </button>
           </div>
           <div class="clearfix"></div>
         </div>
+        <div class="col-md-10 col-sm-12 col-xs-12">
+          <!-- Nav start -->
+          <div class="navbar navbar-default" role="navigation">
+            <div class="navbar-collapse collapse" id="nav-main">
+              <ul class="nav navbar-nav">
+                <li class="dropdown active"><a href=" {% url 'app1:HOME' %} ">Home <span class="caret"></span></a></li>
+                <li><a href=" {% url 'app1:ABOUT' %} ">About us</a></li>
+                <li class="dropdown"><a href=" {% static '#.' %} ">Pages <span class="caret"></span></a>
+                  <!-- dropdown start -->
+                  <ul class="dropdown-menu">
+                    <li><a href=" {% url 'app1:LOGIN1' %} ">Login</a></li>
+                    <li><a href=" {% url 'app1:REGISTER' %} ">Register</a></li>
+                    <li><a href=" {% url 'app1:JOBLISTING' %} ">Job Listing</a></li>
+                    <li><a href=" {% url 'app1:JOBDETAILS' %} ">Job Detail</a></li>
+                    <li><a href=" {% url 'app1:CANDIDATELISTING' %} ">Candidate Listing</a></li>
+                    <li><a href=" {% url 'app1:CANDIDATEDETAILS' %} ">Candidate Detail</a></li>
+                    <li><a href=" {% url 'app1:COMPDETAILS' %} ">Company Profile</a></li>
+                    <li><a href=" {% url 'app1:EDITPROFILE' %} ">Edit Profile</a></li>
+                    <li><a href=" {% url 'app1:POSTJOB' %} ">Post a Job</a></li>
+                    <li><a href=" {% url 'app1:PACKAGES' %} ">Packages</a></li>
+                    <li><a href=" {% url 'app1:FAQS' %} ">FAQs</a></li>
+                    <li><a href=" {% url 'app1:NOTFOUND' %} ">404 Page</a></li>
+                    <li><a href=" {% url 'app1:TYPOGRAPHY' %} ">Typography</a></li>
+                  </ul>
+                  <!-- dropdown end -->
+                </li>
+                <li class="dropdown"><a href=" {% url 'app1:BLOG' %} ">Blog <span class="caret"></span></a>
+                  <!-- dropdown start -->
+                  <ul class="dropdown-menu">
+                    <!-- <li><a href=" {% static 'blog-detail.html' %} ">Blog Detail</a></li> -->
+                    <li><a href=" {% url 'app1:BLOGFULL' %} ">Blog Grid Full Width</a></li>
+                  </ul>
+                  <!-- dropdown end -->
+                </li>
+                <li><a href=" {% url 'app1:CONTACT' %} ">Contact</a></li>
+                <li class="postjob"><a href=" {% url 'app1:POSTJOB' %} ">Post a job</a></li>
+                <li class="jobseeker"><a href=" {% url 'app1:CANDIDATELISTING' %} ">Job Seeker</a></li>
+              </ul>
+              <!-- Nav collapes end -->
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <!-- Nav end -->
+        </div>
       </div>
+      <!-- row end -->
     </div>
+    <!-- Header container end -->
   </div>
-</div>
-<!-- Header end --> <!-- Page Title start -->
+  <!-- Header end -->
+
+
+  
+<!-- Page Title start -->
 <div class="pageTitle">
   <div class="container">
     <div class="row">
