@@ -118,5 +118,62 @@ def userLogOut(request):
 def home(request):
     return render(request,'index3.html')
 
-def compDetails(request):
+def notFound(request):
+    return render(request,'404.html')
+
+def about(request):
+    return render(request,'about-us.html')
+
+def blogDetails(request):
+    return render(request,'blog-detail.html')
+
+def blogFull(request):
+    return render(request,'blog-full-width.html')
+
+def blogGrid(request):
+    return render(request,'blog-grid.html')
+
+def blog(request):
+    return render(request,'blog.html')
+
+def candidateDetails(request):
+    return render(request,'candidate-detail.html')
+
+def candidateListing(request):
+    return render(request,'candidate-listing.html')
+
+def companyDetails(request):
     return render(request,'company-detail.html')
+
+def contact(request):
+    return render(request,'contact-us.html')
+
+def dashboard1(request):
+    return render(request,'dashboard1.html')
+
+def editProfile(request):
+    return render(request,'edit-profile.html')
+
+def faqs(request):
+    return render(request,'faqs.html')
+
+def jobDetails(request):
+    return render(request,'job-detail.html')
+
+def jobListing(request):
+    return render(request,'job-listing.html')
+
+def login1(request):
+    return render(request,'login1.html')
+
+def packages(request):
+    return render(request,'packages.html')
+
+def postJob(request):
+    return render(request,'post-job.html')
+
+def register(request):
+    return render(request,'register.html')
+
+def typography(request):
+    return render(request,'typography.html')
