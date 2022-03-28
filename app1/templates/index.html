@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,24 +9,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Online Job Portal HTML</title>
 <!-- Fav Icon -->
-<link rel="shortcut icon" href="favicon.ico">
+<link rel="shortcut icon" href=" {% static 'favicon.ico' %} ">
 
 <!-- Owl carousel -->
-<link href="css/owl.carousel.css" rel="stylesheet">
+<link href=" {% static 'css/owl.carousel.css' %} " rel="stylesheet">
 
 <!-- Bootstrap -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href=" {% static 'css/bootstrap.min.css' %} " rel="stylesheet">
 
 <!-- Font Awesome -->
-<link href="css/font-awesome.css" rel="stylesheet">
+<link href=" {% static 'css/font-awesome.css' %} " rel="stylesheet">
 
 <!-- Custom Style -->
-<link href="css/main.css" rel="stylesheet">
+<link href=" {% static 'css/main.css' %} " rel="stylesheet">
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
-  <script src="js/html5shiv.min.js"></script>
-  <script src="js/respond.min.js"></script>
+  <script src=" {% static 'js/html5shiv.min.js' %} "></script>
+  <script src=" {% static 'js/respond.min.js' %} "></script>
 <![endif]-->
 
 </head>
@@ -34,7 +35,7 @@
 <div class="header">
   <div class="container">
     <div class="row">
-      <div class="col-md-2 col-sm-3 col-xs-12"> <a href="index.html" class="logo"><img src="images/logo.png" alt="" /></a>
+      <div class="col-md-2 col-sm-3 col-xs-12"> <a href=" {% static 'index.html' %} " class="logo"><img src=" {% static 'images/logo.png' %} " alt="" /></a>
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
         </div>
@@ -45,52 +46,52 @@
         <div class="navbar navbar-default" role="navigation">
           <div class="navbar-collapse collapse" id="nav-main">
             <ul class="nav navbar-nav">
-              <li class="dropdown active"><a href="index.html">Home <span class="caret"></span></a> 
+              <li class="dropdown active"><a href=" {% static 'index.html' %} ">Home <span class="caret"></span></a> 
                 <!-- dropdown start -->
                 <ul class="dropdown-menu">
-                  <li class="active"><a href="index.html">Home Static Image</a></li>
-                  <li><a href="index2.html">Home With Map</a></li>
-                  <li><a href="index3.html">Home With Slider</a></li>
+                  <li class="active"><a href=" {% static 'index.html' %} ">Home Static Image</a></li>
+                  <li><a href=" {% static 'index2.html' %} ">Home With Map</a></li>
+                  <li><a href=" {% static 'index3.html' %} ">Home With Slider</a></li>
                 </ul>
                 <!-- dropdown end --> 
               </li>
-              <li><a href="about-us.html">About us</a></li>
-              <li class="dropdown"><a href="#.">Pages <span class="caret"></span></a> 
+              <li><a href=" {% static 'about-us.html' %} ">About us</a></li>
+              <li class="dropdown"><a href=" {% static '#.' %} ">Pages <span class="caret"></span></a> 
                 <!-- dropdown start -->
                 <ul class="dropdown-menu">
-                  <li><a href="about-us.html">About Us</a></li>
-                  <li><a href="login.html">Login</a></li>
-                  <li><a href="register.html">Register</a></li>
-                  <li><a href="job-listing.html">Job Listing</a></li>
-                  <li><a href="job-detail.html">Job Detail</a></li>
-                  <li><a href="candidate-listing.html">Candidate Listing</a></li>
-                  <li><a href="candidate-detail.html">Candidate Detail</a></li>
-                  <li><a href="company-detail.html">Company Profile</a></li>
-                  <li><a href="edit-profile.html">Edit Profile</a></li>
-                  <li><a href="post-job.html">Post a Job</a></li>
-                  <li><a href="packages.html">Packages</a></li>
-                  <li><a href="faqs.html">FAQs</a></li>
-                  <li><a href="404.html">404 Page</a></li>
-                  <li><a href="typography.html">Typography</a></li>
+                  <li><a href=" {% static 'about-us.html' %} ">About Us</a></li>
+                  <li><a href=" {% static 'login.html' %} ">Login</a></li>
+                  <li><a href=" {% static 'register.html' %} ">Register</a></li>
+                  <li><a href=" {% static 'job-listing.html' %} ">Job Listing</a></li>
+                  <li><a href=" {% static 'job-detail.html' %} ">Job Detail</a></li>
+                  <li><a href=" {% static 'candidate-listing.html' %} ">Candidate Listing</a></li>
+                  <li><a href=" {% static 'candidate-detail.html' %} ">Candidate Detail</a></li>
+                  <li><a href=" {% static 'company-detail.html' %} ">Company Profile</a></li>
+                  <li><a href=" {% static 'edit-profile.html' %} ">Edit Profile</a></li>
+                  <li><a href=" {% static 'post-job.html' %} ">Post a Job</a></li>
+                  <li><a href=" {% static 'packages.html' %} ">Packages</a></li>
+                  <li><a href=" {% static 'faqs.html' %} ">FAQs</a></li>
+                  <li><a href=" {% static '404.html' %} ">404 Page</a></li>
+                  <li><a href=" {% static 'typography.html' %} ">Typography</a></li>
                 </ul>
                 <!-- dropdown end --> 
               </li>
-              <li class="dropdown"><a href="blog.html">Blog <span class="caret"></span></a> 
+              <li class="dropdown"><a href=" {% static 'blog.html' %} ">Blog <span class="caret"></span></a> 
                 <!-- dropdown start -->
                 <ul class="dropdown-menu">
-                  <li><a href="blog.html">Blog List</a></li>
-                  <li><a href="blog-detail.html">Blog Detail</a></li>
-                  <li><a href="blog-grid.html">Blog Grid</a></li>
-                  <li><a href="blog-full-width.html">Blog Grid Full Width</a></li>
+                  <li><a href=" {% static 'blog.html' %} ">Blog List</a></li>
+                  <li><a href=" {% static 'blog-detail.html' %} ">Blog Detail</a></li>
+                  <li><a href=" {% static 'blog-grid.html' %} ">Blog Grid</a></li>
+                  <li><a href=" {% static 'blog-full-width.html' %} ">Blog Grid Full Width</a></li>
                 </ul>
                 <!-- dropdown end --> 
               </li>
-              <li><a href="contact-us.html">Contact</a></li>
-              <li class="postjob"><a href="post-job.html">Post a job</a></li>
-              <li class="jobseeker"><a href="candidate-listing.html">Job Seeker</a></li>
-              <li class="dropdown userbtn"><a href="#"><img src="images/candidates/01.jpg" alt="" class="userimg" /></a>
+              <li><a href=" {% static 'contact-us.html' %} ">Contact</a></li>
+              <li class="postjob"><a href=" {% static 'post-job.html' %} ">Post a job</a></li>
+              <li class="jobseeker"><a href=" {% static 'candidate-listing.html' %} ">Job Seeker</a></li>
+              <li class="dropdown userbtn"><a href="#"><img src=" {% static 'images/candidates/01.jpg' %} " alt="" class="userimg" /></a>
               	 <ul class="dropdown-menu">
-                    <li><a href="dashboard.html"><i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard</a></li>
+                    <li><a href=" {% static 'dashboard.html' %} "><i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard</a></li>
                     <li><a href="#"><i class="fa fa-pencil" aria-hidden="true"></i> Edit Profilt</a></li>
                     <li><a href="#"><i class="fa fa-briefcase" aria-hidden="true"></i> My Jobs</a></li>
                     <li role="separator" class="divider"></li>
@@ -138,7 +139,7 @@
       </div>
     </div>
     <!-- button start -->
-    <div class="getstarted"><a href="#."><i class="fa fa-user" aria-hidden="true"></i> Get Started Now</a></div>
+    <div class="getstarted"><a href=" {% static '#.' %} "><i class="fa fa-user" aria-hidden="true"></i> Get Started Now</a></div>
     <!-- button end --> 
     
   </div>
@@ -195,37 +196,37 @@
     
     <ul class="employerList">
       <!--employer-->
-      <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a href="company-detail.html"><img src="images/employers/emplogo1.jpg" alt="Company Name" /></a></li>
+      <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a href=" {% static 'company-detail.html' %} "><img src=" {% static 'images/employers/emplogo1.jpg' %} " alt="Company Name" /></a></li>
       <!--employer-->
-      <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a href="company-detail.html"><img src="images/employers/emplogo2.jpg" alt="Company Name" /></a></li>
+      <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a href=" {% static 'company-detail.html' %} "><img src=" {% static 'images/employers/emplogo2.jpg' %} " alt="Company Name" /></a></li>
       <!--employer-->
-      <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a href="company-detail.html"><img src="images/employers/emplogo3.jpg" alt="Company Name" /></a></li>
+      <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a href=" {% static 'company-detail.html' %} "><img src=" {% static 'images/employers/emplogo3.jpg' %} " alt="Company Name" /></a></li>
       <!--employer-->
-      <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a href="company-detail.html"><img src="images/employers/emplogo4.jpg" alt="Company Name" /></a></li>
+      <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a href=" {% static 'company-detail.html' %} "><img src=" {% static 'images/employers/emplogo4.jpg' %} " alt="Company Name" /></a></li>
       <!--employer-->
-      <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a href="company-detail.html"><img src="images/employers/emplogo5.jpg" alt="Company Name" /></a></li>
+      <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a href=" {% static 'company-detail.html' %} "><img src=" {% static 'images/employers/emplogo5.jpg' %} " alt="Company Name" /></a></li>
       <!--employer-->
-      <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a href="company-detail.html"><img src="images/employers/emplogo6.jpg" alt="Company Name" /></a></li>
+      <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a href=" {% static 'company-detail.html' %} "><img src=" {% static 'images/employers/emplogo6.jpg' %} " alt="Company Name" /></a></li>
       <!--employer-->
-      <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a href="company-detail.html"><img src="images/employers/emplogo7.jpg" alt="Company Name" /></a></li>
+      <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a href=" {% static 'company-detail.html' %} "><img src=" {% static 'images/employers/emplogo7.jpg' %} " alt="Company Name" /></a></li>
       <!--employer-->
-      <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a href="company-detail.html"><img src="images/employers/emplogo8.jpg" alt="Company Name" /></a></li>
+      <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a href=" {% static 'company-detail.html' %} "><img src=" {% static 'images/employers/emplogo8.jpg' %} " alt="Company Name" /></a></li>
       <!--employer-->
-      <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a href="company-detail.html"><img src="images/employers/emplogo9.jpg" alt="Company Name" /></a></li>
+      <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a href=" {% static 'company-detail.html' %} "><img src=" {% static 'images/employers/emplogo9.jpg' %} " alt="Company Name" /></a></li>
       <!--employer-->
-      <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a href="company-detail.html"><img src="images/employers/emplogo10.jpg" alt="Company Name" /></a></li>
+      <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a href=" {% static 'company-detail.html' %} "><img src=" {% static 'images/employers/emplogo10.jpg' %} " alt="Company Name" /></a></li>
       <!--employer-->
-      <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a href="company-detail.html"><img src="images/employers/emplogo11.jpg" alt="Company Name" /></a></li>
+      <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a href=" {% static 'company-detail.html' %} "><img src=" {% static 'images/employers/emplogo11.jpg' %} " alt="Company Name" /></a></li>
       <!--employer-->
-      <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a href="company-detail.html"><img src="images/employers/emplogo12.jpg" alt="Company Name" /></a></li>
+      <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a href=" {% static 'company-detail.html' %} "><img src=" {% static 'images/employers/emplogo12.jpg' %} " alt="Company Name" /></a></li>
       <!--employer-->
-      <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a href="company-detail.html"><img src="images/employers/emplogo13.jpg" alt="Company Name" /></a></li>
+      <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a href=" {% static 'company-detail.html' %} "><img src=" {% static 'images/employers/emplogo13.jpg' %} " alt="Company Name" /></a></li>
       <!--employer-->
-      <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a href="company-detail.html"><img src="images/employers/emplogo14.jpg" alt="Company Name" /></a></li>
+      <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a href=" {% static 'company-detail.html' %} "><img src=" {% static 'images/employers/emplogo14.jpg' %} " alt="Company Name" /></a></li>
       <!--employer-->
-      <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a href="company-detail.html"><img src="images/employers/emplogo15.jpg" alt="Company Name" /></a></li>
+      <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a href=" {% static 'company-detail.html' %} "><img src=" {% static 'images/employers/emplogo15.jpg' %} " alt="Company Name" /></a></li>
       <!--employer-->
-      <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a href="company-detail.html"><img src="images/employers/emplogo16.jpg" alt="Company Name" /></a></li>
+      <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a href=" {% static 'company-detail.html' %} "><img src=" {% static 'images/employers/emplogo16.jpg' %} " alt="Company Name" /></a></li>
     </ul>
   </div>
 </div>
@@ -245,20 +246,20 @@
         <!--Categories start-->
         <h4>Browse By Categories</h4>
         <ul class="row catelist">
-          <li class="col-md-6 col-sm-6"><a href="#.">Marketing <span>(174)</span></a></li>
-          <li class="col-md-6 col-sm-6"><a href="#.">Teaching &amp; Education <span>(174)</span></a></li>
-          <li class="col-md-6 col-sm-6"><a href="#.">Writing <span>(174)</span></a></li>
-          <li class="col-md-6 col-sm-6"><a href="#.">Telemarketing <span>(174)</span></a></li>
-          <li class="col-md-6 col-sm-6"><a href="#.">Administration <span>(174)</span></a></li>
-          <li class="col-md-6 col-sm-6"><a href="#.">Clerical &amp; Front Office <span>(174)</span></a></li>
-          <li class="col-md-6 col-sm-6"><a href="#.">SEO <span>(174)</span></a></li>
-          <li class="col-md-6 col-sm-6"><a href="#.">Engineering <span>(174)</span></a></li>
-          <li class="col-md-6 col-sm-6"><a href="#.">Software & Web <span>(174)</span></a></li>
-          <li class="col-md-6 col-sm-6"><a href="#.">Sales & BD <span>(174)</span></a></li>
-          <li class="col-md-6 col-sm-6"><a href="#.">Customer Service <span>(174)</span></a></li>
-          <li class="col-md-6 col-sm-6"><a href="#.">Creative Design <span>(174)</span></a></li>
-          <li class="col-md-6 col-sm-6"><a href="#.">Accounts & Finance <span>(174)</span></a></li>
-          <li class="col-md-6 col-sm-6"><a href="#.">Web Design <span>(174)</span></a></li>
+          <li class="col-md-6 col-sm-6"><a href=" {% static '#.' %} ">Marketing <span>(174)</span></a></li>
+          <li class="col-md-6 col-sm-6"><a href=" {% static '#.' %} ">Teaching &amp; Education <span>(174)</span></a></li>
+          <li class="col-md-6 col-sm-6"><a href=" {% static '#.' %} ">Writing <span>(174)</span></a></li>
+          <li class="col-md-6 col-sm-6"><a href=" {% static '#.' %} ">Telemarketing <span>(174)</span></a></li>
+          <li class="col-md-6 col-sm-6"><a href=" {% static '#.' %} ">Administration <span>(174)</span></a></li>
+          <li class="col-md-6 col-sm-6"><a href=" {% static '#.' %} ">Clerical &amp; Front Office <span>(174)</span></a></li>
+          <li class="col-md-6 col-sm-6"><a href=" {% static '#.' %} ">SEO <span>(174)</span></a></li>
+          <li class="col-md-6 col-sm-6"><a href=" {% static '#.' %} ">Engineering <span>(174)</span></a></li>
+          <li class="col-md-6 col-sm-6"><a href=" {% static '#.' %} ">Software & Web <span>(174)</span></a></li>
+          <li class="col-md-6 col-sm-6"><a href=" {% static '#.' %} ">Sales & BD <span>(174)</span></a></li>
+          <li class="col-md-6 col-sm-6"><a href=" {% static '#.' %} ">Customer Service <span>(174)</span></a></li>
+          <li class="col-md-6 col-sm-6"><a href=" {% static '#.' %} ">Creative Design <span>(174)</span></a></li>
+          <li class="col-md-6 col-sm-6"><a href=" {% static '#.' %} ">Accounts & Finance <span>(174)</span></a></li>
+          <li class="col-md-6 col-sm-6"><a href=" {% static '#.' %} ">Web Design <span>(174)</span></a></li>
         </ul>
         <!--Categories end--> 
       </div>
@@ -266,30 +267,30 @@
         <!--Cities start-->
         <h5>Browse By Cities</h5>
         <ul class="row catelist">
-          <li class="col-md-4 col-sm-4 col-xs-6"><a href="#.">New York</a></li>
-          <li class="col-md-4 col-sm-4 col-xs-6"><a href="#.">Alexander City</a></li>
-          <li class="col-md-4 col-sm-4 col-xs-6"><a href="#.">Andalusia</a></li>
-          <li class="col-md-4 col-sm-4 col-xs-6"><a href="#.">Anniston</a></li>
-          <li class="col-md-4 col-sm-4 col-xs-6"><a href="#.">Athens</a></li>
-          <li class="col-md-4 col-sm-4 col-xs-6"><a href="#.">Atmore</a></li>
-          <li class="col-md-4 col-sm-4 col-xs-6"><a href="#.">Auburn</a></li>
-          <li class="col-md-4 col-sm-4 col-xs-6"><a href="#.">Bessemer</a></li>
-          <li class="col-md-4 col-sm-4 col-xs-6"><a href="#.">Birmingham</a></li>
-          <li class="col-md-4 col-sm-4 col-xs-6"><a href="#.">Chickasaw</a></li>
-          <li class="col-md-4 col-sm-4 col-xs-6"><a href="#.">Clanton</a></li>
-          <li class="col-md-4 col-sm-4 col-xs-6"><a href="#.">Cullman</a></li>
-          <li class="col-md-4 col-sm-4 col-xs-6"><a href="#.">Decatur</a></li>
-          <li class="col-md-4 col-sm-4 col-xs-6"><a href="#.">Demopolis</a></li>
-          <li class="col-md-4 col-sm-4 col-xs-6"><a href="#.">Dothan</a></li>
-          <li class="col-md-4 col-sm-4 col-xs-6"><a href="#.">Enterprise</a></li>
-          <li class="col-md-4 col-sm-4 col-xs-6"><a href="#.">Eufaula</a></li>
-          <li class="col-md-4 col-sm-4 col-xs-6"><a href="#.">Anchorage</a></li>
-          <li class="col-md-4 col-sm-4 col-xs-6"><a href="#.">Cordova</a></li>
-          <li class="col-md-4 col-sm-4 col-xs-6"><a href="#.">Fairbanks</a></li>
-          <li class="col-md-4 col-sm-4 col-xs-6"><a href="#.">Haines</a></li>
-          <li class="col-md-4 col-sm-4 col-xs-6"><a href="#.">Birmingham</a></li>
-          <li class="col-md-4 col-sm-4 col-xs-6"><a href="#.">Chickasaw</a></li>
-          <li class="col-md-4 col-sm-4 col-xs-6"><a href="#.">Clanton</a></li>
+          <li class="col-md-4 col-sm-4 col-xs-6"><a href=" {% static '#.' %} ">New York</a></li>
+          <li class="col-md-4 col-sm-4 col-xs-6"><a href=" {% static '#.' %} ">Alexander City</a></li>
+          <li class="col-md-4 col-sm-4 col-xs-6"><a href=" {% static '#.' %} ">Andalusia</a></li>
+          <li class="col-md-4 col-sm-4 col-xs-6"><a href=" {% static '#.' %} ">Anniston</a></li>
+          <li class="col-md-4 col-sm-4 col-xs-6"><a href=" {% static '#.' %} ">Athens</a></li>
+          <li class="col-md-4 col-sm-4 col-xs-6"><a href=" {% static '#.' %} ">Atmore</a></li>
+          <li class="col-md-4 col-sm-4 col-xs-6"><a href=" {% static '#.' %} ">Auburn</a></li>
+          <li class="col-md-4 col-sm-4 col-xs-6"><a href=" {% static '#.' %} ">Bessemer</a></li>
+          <li class="col-md-4 col-sm-4 col-xs-6"><a href=" {% static '#.' %} ">Birmingham</a></li>
+          <li class="col-md-4 col-sm-4 col-xs-6"><a href=" {% static '#.' %} ">Chickasaw</a></li>
+          <li class="col-md-4 col-sm-4 col-xs-6"><a href=" {% static '#.' %} ">Clanton</a></li>
+          <li class="col-md-4 col-sm-4 col-xs-6"><a href=" {% static '#.' %} ">Cullman</a></li>
+          <li class="col-md-4 col-sm-4 col-xs-6"><a href=" {% static '#.' %} ">Decatur</a></li>
+          <li class="col-md-4 col-sm-4 col-xs-6"><a href=" {% static '#.' %} ">Demopolis</a></li>
+          <li class="col-md-4 col-sm-4 col-xs-6"><a href=" {% static '#.' %} ">Dothan</a></li>
+          <li class="col-md-4 col-sm-4 col-xs-6"><a href=" {% static '#.' %} ">Enterprise</a></li>
+          <li class="col-md-4 col-sm-4 col-xs-6"><a href=" {% static '#.' %} ">Eufaula</a></li>
+          <li class="col-md-4 col-sm-4 col-xs-6"><a href=" {% static '#.' %} ">Anchorage</a></li>
+          <li class="col-md-4 col-sm-4 col-xs-6"><a href=" {% static '#.' %} ">Cordova</a></li>
+          <li class="col-md-4 col-sm-4 col-xs-6"><a href=" {% static '#.' %} ">Fairbanks</a></li>
+          <li class="col-md-4 col-sm-4 col-xs-6"><a href=" {% static '#.' %} ">Haines</a></li>
+          <li class="col-md-4 col-sm-4 col-xs-6"><a href=" {% static '#.' %} ">Birmingham</a></li>
+          <li class="col-md-4 col-sm-4 col-xs-6"><a href=" {% static '#.' %} ">Chickasaw</a></li>
+          <li class="col-md-4 col-sm-4 col-xs-6"><a href=" {% static '#.' %} ">Clanton</a></li>
         </ul>
         <!--Cities end--> 
       </div>
@@ -314,13 +315,13 @@
       <li class="col-md-6">
         <div class="jobint">
           <div class="row">
-            <div class="col-md-2 col-sm-2"><img src="images/employers/emplogo1.jpg" alt="Job Name" /></div>
+            <div class="col-md-2 col-sm-2"><img src=" {% static 'images/employers/emplogo1.jpg' %} " alt="Job Name" /></div>
             <div class="col-md-7 col-sm-7">
-              <h4><a href="#.">Technical Database Engineer</a></h4>
-              <div class="company"><a href="#.">Datebase Management Company</a></div>
+              <h4><a href=" {% static '#.' %} ">Technical Database Engineer</a></h4>
+              <div class="company"><a href=" {% static '#.' %} ">Datebase Management Company</a></div>
               <div class="jobloc"><label class="fulltime">Full Time</label>   - <span>New York</span></div>
             </div>
-            <div class="col-md-3 col-sm-3"><a href="#." class="applybtn">Apply Now</a></div>
+            <div class="col-md-3 col-sm-3"><a href=" {% static '#.' %} " class="applybtn">Apply Now</a></div>
           </div>
         </div>
       </li>
@@ -330,13 +331,13 @@
       <li class="col-md-6">
         <div class="jobint">
           <div class="row">
-            <div class="col-md-2 col-sm-2"><img src="images/employers/emplogo2.jpg" alt="Job Name" /></div>
+            <div class="col-md-2 col-sm-2"><img src=" {% static 'images/employers/emplogo2.jpg' %} " alt="Job Name" /></div>
             <div class="col-md-7 col-sm-7">
-              <h4><a href="#.">Technical Database Engineer</a></h4>
-              <div class="company"><a href="#.">Datebase Management Company</a></div>
+              <h4><a href=" {% static '#.' %} ">Technical Database Engineer</a></h4>
+              <div class="company"><a href=" {% static '#.' %} ">Datebase Management Company</a></div>
               <div class="jobloc"><label class="partTime">Part Time</label>   - <span>New York</span></div>
             </div>
-            <div class="col-md-3 col-sm-3"><a href="#." class="applybtn">Apply Now</a></div>
+            <div class="col-md-3 col-sm-3"><a href=" {% static '#.' %} " class="applybtn">Apply Now</a></div>
           </div>
         </div>
       </li>
@@ -346,13 +347,13 @@
       <li class="col-md-6">
         <div class="jobint">
           <div class="row">
-            <div class="col-md-2 col-sm-2"><img src="images/employers/emplogo3.jpg" alt="Job Name" /></div>
+            <div class="col-md-2 col-sm-2"><img src=" {% static 'images/employers/emplogo3.jpg' %} " alt="Job Name" /></div>
             <div class="col-md-7 col-sm-7">
-              <h4><a href="#.">Technical Database Engineer</a></h4>
-              <div class="company"><a href="#.">Datebase Management Company</a></div>
+              <h4><a href=" {% static '#.' %} ">Technical Database Engineer</a></h4>
+              <div class="company"><a href=" {% static '#.' %} ">Datebase Management Company</a></div>
               <div class="jobloc"><label class="freelance">Free Lancer</label>   - <span>New York</span></div>
             </div>
-            <div class="col-md-3 col-sm-3"><a href="#." class="applybtn">Apply Now</a></div>
+            <div class="col-md-3 col-sm-3"><a href=" {% static '#.' %} " class="applybtn">Apply Now</a></div>
           </div>
         </div>
       </li>
@@ -362,13 +363,13 @@
       <li class="col-md-6">
         <div class="jobint">
           <div class="row">
-            <div class="col-md-2 col-sm-2"><img src="images/employers/emplogo4.jpg" alt="Job Name" /></div>
+            <div class="col-md-2 col-sm-2"><img src=" {% static 'images/employers/emplogo4.jpg' %} " alt="Job Name" /></div>
             <div class="col-md-7 col-sm-7">
-              <h4><a href="#.">Technical Database Engineer</a></h4>
-              <div class="company"><a href="#.">Datebase Management Company</a></div>
+              <h4><a href=" {% static '#.' %} ">Technical Database Engineer</a></h4>
+              <div class="company"><a href=" {% static '#.' %} ">Datebase Management Company</a></div>
               <div class="jobloc"><label class="fulltime">Full Time</label>   - <span>New York</span></div>
             </div>
-            <div class="col-md-3 col-sm-3"><a href="#." class="applybtn">Apply Now</a></div>
+            <div class="col-md-3 col-sm-3"><a href=" {% static '#.' %} " class="applybtn">Apply Now</a></div>
           </div>
         </div>
       </li>
@@ -378,13 +379,13 @@
       <li class="col-md-6">
         <div class="jobint">
           <div class="row">
-            <div class="col-md-2 col-sm-2"><img src="images/employers/emplogo5.jpg" alt="Job Name" /></div>
+            <div class="col-md-2 col-sm-2"><img src=" {% static 'images/employers/emplogo5.jpg' %} " alt="Job Name" /></div>
             <div class="col-md-7 col-sm-7">
-              <h4><a href="#.">Technical Database Engineer</a></h4>
-              <div class="company"><a href="#.">Datebase Management Company</a></div>
+              <h4><a href=" {% static '#.' %} ">Technical Database Engineer</a></h4>
+              <div class="company"><a href=" {% static '#.' %} ">Datebase Management Company</a></div>
               <div class="jobloc"><label class="partTime">Part Time</label>   - <span>New York</span></div>
             </div>
-            <div class="col-md-3 col-sm-3"><a href="#." class="applybtn">Apply Now</a></div>
+            <div class="col-md-3 col-sm-3"><a href=" {% static '#.' %} " class="applybtn">Apply Now</a></div>
           </div>
         </div>
       </li>
@@ -394,13 +395,13 @@
       <li class="col-md-6">
         <div class="jobint">
           <div class="row">
-            <div class="col-md-2 col-sm-2"><img src="images/employers/emplogo6.jpg" alt="Job Name" /></div>
+            <div class="col-md-2 col-sm-2"><img src=" {% static 'images/employers/emplogo6.jpg' %} " alt="Job Name" /></div>
             <div class="col-md-7 col-sm-7">
-              <h4><a href="#.">Technical Database Engineer</a></h4>
-              <div class="company"><a href="#.">Datebase Management Company</a></div>
+              <h4><a href=" {% static '#.' %} ">Technical Database Engineer</a></h4>
+              <div class="company"><a href=" {% static '#.' %} ">Datebase Management Company</a></div>
               <div class="jobloc"><label class="freelance">Free Lancer</label>   - <span>New York</span></div>
             </div>
-            <div class="col-md-3 col-sm-3"><a href="#." class="applybtn">Apply Now</a></div>
+            <div class="col-md-3 col-sm-3"><a href=" {% static '#.' %} " class="applybtn">Apply Now</a></div>
           </div>
         </div>
       </li>
@@ -410,13 +411,13 @@
       <li class="col-md-6">
         <div class="jobint">
           <div class="row">
-            <div class="col-md-2 col-sm-2"><img src="images/employers/emplogo7.jpg" alt="Job Name" /></div>
+            <div class="col-md-2 col-sm-2"><img src=" {% static 'images/employers/emplogo7.jpg' %} " alt="Job Name" /></div>
             <div class="col-md-7 col-sm-7">
-              <h4><a href="#.">Technical Database Engineer</a></h4>
-              <div class="company"><a href="#.">Datebase Management Company</a></div>
+              <h4><a href=" {% static '#.' %} ">Technical Database Engineer</a></h4>
+              <div class="company"><a href=" {% static '#.' %} ">Datebase Management Company</a></div>
               <div class="jobloc"><label class="fulltime">Full Time</label>   - <span>New York</span></div>
             </div>
-            <div class="col-md-3 col-sm-3"><a href="#." class="applybtn">Apply Now</a></div>
+            <div class="col-md-3 col-sm-3"><a href=" {% static '#.' %} " class="applybtn">Apply Now</a></div>
           </div>
         </div>
       </li>
@@ -426,13 +427,13 @@
       <li class="col-md-6">
         <div class="jobint">
           <div class="row">
-            <div class="col-md-2 col-sm-2"><img src="images/employers/emplogo8.jpg" alt="Job Name" /></div>
+            <div class="col-md-2 col-sm-2"><img src=" {% static 'images/employers/emplogo8.jpg' %} " alt="Job Name" /></div>
             <div class="col-md-7 col-sm-7">
-              <h4><a href="#.">Technical Database Engineer</a></h4>
-              <div class="company"><a href="#.">Datebase Management Company</a></div>
+              <h4><a href=" {% static '#.' %} ">Technical Database Engineer</a></h4>
+              <div class="company"><a href=" {% static '#.' %} ">Datebase Management Company</a></div>
               <div class="jobloc"><label class="partTime">Part Time</label>   - <span>New York</span></div>
             </div>
-            <div class="col-md-3 col-sm-3"><a href="#." class="applybtn">Apply Now</a></div>
+            <div class="col-md-3 col-sm-3"><a href=" {% static '#.' %} " class="applybtn">Apply Now</a></div>
           </div>
         </div>
       </li>
@@ -442,13 +443,13 @@
       <li class="col-md-6">
         <div class="jobint">
           <div class="row">
-            <div class="col-md-2 col-sm-2"><img src="images/employers/emplogo9.jpg" alt="Job Name" /></div>
+            <div class="col-md-2 col-sm-2"><img src=" {% static 'images/employers/emplogo9.jpg' %} " alt="Job Name" /></div>
             <div class="col-md-7 col-sm-7">
-              <h4><a href="#.">Technical Database Engineer</a></h4>
-              <div class="company"><a href="#.">Datebase Management Company</a></div>
+              <h4><a href=" {% static '#.' %} ">Technical Database Engineer</a></h4>
+              <div class="company"><a href=" {% static '#.' %} ">Datebase Management Company</a></div>
               <div class="jobloc"><label class="freelance">Free Lancer</label>   - <span>New York</span></div>
             </div>
-            <div class="col-md-3 col-sm-3"><a href="#." class="applybtn">Apply Now</a></div>
+            <div class="col-md-3 col-sm-3"><a href=" {% static '#.' %} " class="applybtn">Apply Now</a></div>
           </div>
         </div>
       </li>
@@ -458,13 +459,13 @@
       <li class="col-md-6">
         <div class="jobint">
           <div class="row">
-            <div class="col-md-2 col-sm-2"><img src="images/employers/emplogo10.jpg" alt="Job Name" /></div>
+            <div class="col-md-2 col-sm-2"><img src=" {% static 'images/employers/emplogo10.jpg' %} " alt="Job Name" /></div>
             <div class="col-md-7 col-sm-7">
-              <h4><a href="#.">Technical Database Engineer</a></h4>
-              <div class="company"><a href="#.">Datebase Management Company</a></div>
+              <h4><a href=" {% static '#.' %} ">Technical Database Engineer</a></h4>
+              <div class="company"><a href=" {% static '#.' %} ">Datebase Management Company</a></div>
               <div class="jobloc"><label class="freelance">Free Lancer</label>   - <span>New York</span></div>
             </div>
-            <div class="col-md-3 col-sm-3"><a href="#." class="applybtn">Apply Now</a></div>
+            <div class="col-md-3 col-sm-3"><a href=" {% static '#.' %} " class="applybtn">Apply Now</a></div>
           </div>
         </div>
       </li>
@@ -474,7 +475,7 @@
     <!--Featured Job end--> 
     
     <!--button start-->
-    <div class="viewallbtn"><a href="job-listing.html">View All Featured Jobs</a></div>
+    <div class="viewallbtn"><a href=" {% static 'job-listing.html' %} ">View All Featured Jobs</a></div>
     <!--button end--> 
   </div>
 </div>
@@ -491,7 +492,7 @@
     <!-- title end -->
     
     <p>Aliquam vestibulum cursus felis. In iaculis iaculis sapien ac condimentum. Vestibulum congue posuere lacus, id tincidunt nisi porta sit amet. Suspendisse et sapien varius, pellentesque dui non, semper orci.</p>
-    <a href="#."><i class="fa fa-play-circle-o" aria-hidden="true"></i></a> </div>
+    <a href=" {% static '#.' %} "><i class="fa fa-play-circle-o" aria-hidden="true"></i></a> </div>
 </div>
 <!-- Video end --> 
 
@@ -510,10 +511,10 @@
       <li class="col-md-4 col-sm-6">
         <div class="jobint">
           <div class="row">
-            <div class="col-md-3 col-sm-3"><img src="images/employers/emplogo1.jpg" alt="Job Name" /></div>
+            <div class="col-md-3 col-sm-3"><img src=" {% static 'images/employers/emplogo1.jpg' %} " alt="Job Name" /></div>
             <div class="col-md-9 col-sm-9">
-              <h4><a href="#.">Technical Database Engineer</a></h4>
-              <div class="company"><a href="#.">Datebase Management Company</a></div>
+              <h4><a href=" {% static '#.' %} ">Technical Database Engineer</a></h4>
+              <div class="company"><a href=" {% static '#.' %} ">Datebase Management Company</a></div>
               <div class="jobloc"><label class="fulltime">Full Time</label>  - <span>New York</span></div>
             </div>
           </div>
@@ -525,10 +526,10 @@
       <li class="col-md-4 col-sm-6">
         <div class="jobint">
           <div class="row">
-            <div class="col-md-3 col-sm-3"><img src="images/employers/emplogo11.jpg" alt="Job Name" /></div>
+            <div class="col-md-3 col-sm-3"><img src=" {% static 'images/employers/emplogo11.jpg' %} " alt="Job Name" /></div>
             <div class="col-md-9 col-sm-9">
-              <h4><a href="#.">Technical Database Engineer</a></h4>
-              <div class="company"><a href="#.">Datebase Management Company</a></div>
+              <h4><a href=" {% static '#.' %} ">Technical Database Engineer</a></h4>
+              <div class="company"><a href=" {% static '#.' %} ">Datebase Management Company</a></div>
               <div class="jobloc"><label class="freelance">Free Lancer</label>   - <span>New York</span></div>
             </div>
           </div>
@@ -540,10 +541,10 @@
       <li class="col-md-4 col-sm-6">
         <div class="jobint">
           <div class="row">
-            <div class="col-md-3 col-sm-3"><img src="images/employers/emplogo12.jpg" alt="Job Name" /></div>
+            <div class="col-md-3 col-sm-3"><img src=" {% static 'images/employers/emplogo12.jpg' %} " alt="Job Name" /></div>
             <div class="col-md-9 col-sm-9">
-              <h4><a href="#.">Technical Database Engineer</a></h4>
-              <div class="company"><a href="#.">Datebase Management Company</a></div>
+              <h4><a href=" {% static '#.' %} ">Technical Database Engineer</a></h4>
+              <div class="company"><a href=" {% static '#.' %} ">Datebase Management Company</a></div>
               <div class="jobloc"><label class="partTime">Part Time</label>   - <span>New York</span></div>
             </div>
           </div>
@@ -555,10 +556,10 @@
       <li class="col-md-4 col-sm-6">
         <div class="jobint">
           <div class="row">
-            <div class="col-md-3 col-sm-3"><img src="images/employers/emplogo13.jpg" alt="Job Name" /></div>
+            <div class="col-md-3 col-sm-3"><img src=" {% static 'images/employers/emplogo13.jpg' %} " alt="Job Name" /></div>
             <div class="col-md-9 col-sm-9">
-              <h4><a href="#.">Technical Database Engineer</a></h4>
-              <div class="company"><a href="#.">Datebase Management Company</a></div>
+              <h4><a href=" {% static '#.' %} ">Technical Database Engineer</a></h4>
+              <div class="company"><a href=" {% static '#.' %} ">Datebase Management Company</a></div>
               <div class="jobloc"><label class="freelance">Free Lancer</label>   - <span>New York</span></div>
             </div>
           </div>
@@ -570,10 +571,10 @@
       <li class="col-md-4 col-sm-6">
         <div class="jobint">
           <div class="row">
-            <div class="col-md-3 col-sm-3"><img src="images/employers/emplogo14.jpg" alt="Job Name" /></div>
+            <div class="col-md-3 col-sm-3"><img src=" {% static 'images/employers/emplogo14.jpg' %} " alt="Job Name" /></div>
             <div class="col-md-9 col-sm-9">
-              <h4><a href="#.">Technical Database Engineer</a></h4>
-              <div class="company"><a href="#.">Datebase Management Company</a></div>
+              <h4><a href=" {% static '#.' %} ">Technical Database Engineer</a></h4>
+              <div class="company"><a href=" {% static '#.' %} ">Datebase Management Company</a></div>
               <div class="jobloc"><label class="fulltime">Full Time</label>   - <span>New York</span></div>
             </div>
           </div>
@@ -585,10 +586,10 @@
       <li class="col-md-4 col-sm-6">
         <div class="jobint">
           <div class="row">
-            <div class="col-md-3 col-sm-3"><img src="images/employers/emplogo15.jpg" alt="Job Name" /></div>
+            <div class="col-md-3 col-sm-3"><img src=" {% static 'images/employers/emplogo15.jpg' %} " alt="Job Name" /></div>
             <div class="col-md-9 col-sm-9">
-              <h4><a href="#.">Technical Database Engineer</a></h4>
-              <div class="company"><a href="#.">Datebase Management Company</a></div>
+              <h4><a href=" {% static '#.' %} ">Technical Database Engineer</a></h4>
+              <div class="company"><a href=" {% static '#.' %} ">Datebase Management Company</a></div>
               <div class="jobloc"><label class="fulltime">Full Time</label>   - <span>New York</span></div>
             </div>
           </div>
@@ -600,10 +601,10 @@
       <li class="col-md-4 col-sm-6">
         <div class="jobint">
           <div class="row">
-            <div class="col-md-3 col-sm-3"><img src="images/employers/emplogo16.jpg" alt="Job Name" /></div>
+            <div class="col-md-3 col-sm-3"><img src=" {% static 'images/employers/emplogo16.jpg' %} " alt="Job Name" /></div>
             <div class="col-md-9 col-sm-9">
-              <h4><a href="#.">Technical Database Engineer</a></h4>
-              <div class="company"><a href="#.">Datebase Management Company</a></div>
+              <h4><a href=" {% static '#.' %} ">Technical Database Engineer</a></h4>
+              <div class="company"><a href=" {% static '#.' %} ">Datebase Management Company</a></div>
               <div class="jobloc"><label class="partTime">Part Time</label>   - <span>New York</span></div>
             </div>
           </div>
@@ -615,10 +616,10 @@
       <li class="col-md-4 col-sm-6">
         <div class="jobint">
           <div class="row">
-            <div class="col-md-3 col-sm-3"><img src="images/employers/emplogo2.jpg" alt="Job Name" /></div>
+            <div class="col-md-3 col-sm-3"><img src=" {% static 'images/employers/emplogo2.jpg' %} " alt="Job Name" /></div>
             <div class="col-md-9 col-sm-9">
-              <h4><a href="#.">Technical Database Engineer</a></h4>
-              <div class="company"><a href="#.">Datebase Management Company</a></div>
+              <h4><a href=" {% static '#.' %} ">Technical Database Engineer</a></h4>
+              <div class="company"><a href=" {% static '#.' %} ">Datebase Management Company</a></div>
               <div class="jobloc"><label class="freelance">Free Lancer</label>   - <span>New York</span></div>
             </div>
           </div>
@@ -630,10 +631,10 @@
       <li class="col-md-4 col-sm-6">
         <div class="jobint">
           <div class="row">
-            <div class="col-md-3 col-sm-3"><img src="images/employers/emplogo3.jpg" alt="Job Name" /></div>
+            <div class="col-md-3 col-sm-3"><img src=" {% static 'images/employers/emplogo3.jpg' %} " alt="Job Name" /></div>
             <div class="col-md-9 col-sm-9">
-              <h4><a href="#.">Technical Database Engineer</a></h4>
-              <div class="company"><a href="#.">Datebase Management Company</a></div>
+              <h4><a href=" {% static '#.' %} ">Technical Database Engineer</a></h4>
+              <div class="company"><a href=" {% static '#.' %} ">Datebase Management Company</a></div>
               <div class="jobloc"><label class="fulltime">Full Time</label>   - <span>New York</span></div>
             </div>
           </div>
@@ -642,7 +643,7 @@
       <!--Job end-->
     </ul>
     <!--view button-->
-    <div class="viewallbtn"><a href="#.">View All Latest Jobs</a></div>
+    <div class="viewallbtn"><a href=" {% static '#.' %} ">View All Latest Jobs</a></div>
     <!--view button end--> 
   </div>
 </div>
@@ -661,7 +662,7 @@
     <ul class="testimonialsList">
       <!--user 1 Start-->
       <li class="item">
-        <div class="testimg"><img src="images/userimg.jpg" alt="Your alt text here" /></div>
+        <div class="testimg"><img src=" {% static 'images/userimg.jpg' %} " alt="Your alt text here" /></div>
         <div class="clientname">Garry Miller Jr</div>
         <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum viverra id nunc at finibus. Etiam sollicitudin faucibus cursus. Proin luctus cursus nulla sed iaculis. Quisque vestibulum augue nec aliquet aliquet."</p>
         <div class="clientinfo">CEO - Gates Inc</div>
@@ -670,7 +671,7 @@
       
       <!--user 2 Start-->
       <li class="item">
-        <div class="testimg"><img src="images/userimg.jpg" alt="Your alt text here" /></div>
+        <div class="testimg"><img src=" {% static 'images/userimg.jpg' %} " alt="Your alt text here" /></div>
         <div class="clientname">Garry Miller Jr</div>
         <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum viverra id nunc at finibus. Etiam sollicitudin faucibus cursus. Proin luctus cursus nulla sed iaculis. Quisque vestibulum augue nec aliquet aliquet."</p>
         <div class="clientinfo">CEO - Gates Inc</div>
@@ -687,7 +688,7 @@
     <div class="row">
       <div class="col-md-5 col-sm-6"> 
         <!--app image Start-->
-        <div class="appimg"><img src="images/app-mobile.png" alt="Your alt text here" /></div>
+        <div class="appimg"><img src=" {% static 'images/app-mobile.png' %} " alt="Your alt text here" /></div>
         <!--app image end--> 
       </div>
       <div class="col-md-7 col-sm-6"> 
@@ -700,8 +701,8 @@
         <p>Aliquam vestibulum cursus felis. In iaculis iaculis sapien ac condimentum. Vestibulum congue posuere lacus, id tincidunt nisi porta sit amet. Suspendisse et sapien varius, pellentesque dui non, semper orci. Curabitur blandit, diam ut ornare ultricies.</p>
         <div class="appbtn">
           <div class="row">
-            <div class="col-md-6 col-sm-6 col-xs-6"><a href="#."><img src="images/apple-btn.png" alt="Your alt text here"></a></div>
-            <div class="col-md-6 col-sm-6 col-xs-6"><a href="#."><img src="images/andriod-btn.png" alt="Your alt text here"></a></div>
+            <div class="col-md-6 col-sm-6 col-xs-6"><a href=" {% static '#.' %} "><img src=" {% static 'images/apple-btn.png' %} " alt="Your alt text here"></a></div>
+            <div class="col-md-6 col-sm-6 col-xs-6"><a href=" {% static '#.' %} "><img src=" {% static 'images/andriod-btn.png' %} " alt="Your alt text here"></a></div>
           </div>
         </div>
         <!--app info end--> 
@@ -717,11 +718,11 @@
     <div class="row"> 
       <!--About Us-->
       <div class="col-md-3 col-sm-12">
-        <div class="ft-logo"><img src="images/logo.png" alt="Your alt text here"></div>
+        <div class="ft-logo"><img src=" {% static 'images/logo.png' %} " alt="Your alt text here"></div>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et consequat elit. Proin molestie eros sed urna auctor lobortis. Integer eget scelerisque arcu. Pellentesque scelerisque pellentesque nisl, sit amet aliquam mi pellentesque fringilla. Ut porta augue a libero pretium laoreet. Suspendisse sit amet massa accumsan, pulvinar augue id, tristique tortor.</p>
         
         <!-- Social Icons -->
-        <div class="social"> <a href="#." target="_blank"> <i class="fa fa-facebook-square" aria-hidden="true"></i></a> <a href="#." target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a> <a href="#." target="_blank"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a> <a href="#." target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a> <a href="#." target="_blank"><i class="fa fa-youtube-square" aria-hidden="true"></i></a> </div>
+        <div class="social"> <a href=" {% static '#.' %} " target="_blank"> <i class="fa fa-facebook-square" aria-hidden="true"></i></a> <a href="#." target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a> <a href="#." target="_blank"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a> <a href="#." target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a> <a href="#." target="_blank"><i class="fa fa-youtube-square" aria-hidden="true"></i></a> </div>
         <!-- Social Icons end --> 
       </div>
       <!--About us End--> 
@@ -731,15 +732,15 @@
         <h5>Quick Links</h5>
         <!--Quick Links menu Start-->
         <ul class="quicklinks">
-          <li><a href="#.">Career Services</a></li>
-          <li><a href="#.">CV Writing</a></li>
-          <li><a href="#.">Career Resources</a></li>
-          <li><a href="#.">Company Listings</a></li>
-          <li><a href="#.">Success Stories</a></li>
-          <li><a href="#.">Contact Us</a></li>
-          <li><a href="#.">Create Account</a></li>
-          <li><a href="#.">Post a Job</a></li>
-          <li><a href="#.">Contact Sales</a></li>
+          <li><a href=" {% static '#.' %} ">Career Services</a></li>
+          <li><a href=" {% static '#.' %} ">CV Writing</a></li>
+          <li><a href=" {% static '#.' %} ">Career Resources</a></li>
+          <li><a href=" {% static '#.' %} ">Company Listings</a></li>
+          <li><a href=" {% static '#.' %} ">Success Stories</a></li>
+          <li><a href=" {% static '#.' %} ">Contact Us</a></li>
+          <li><a href=" {% static '#.' %} ">Create Account</a></li>
+          <li><a href=" {% static '#.' %} ">Post a Job</a></li>
+          <li><a href=" {% static '#.' %} ">Contact Sales</a></li>
         </ul>
       </div>
       <!--Quick Links menu end--> 
@@ -749,15 +750,15 @@
         <h5>Jobs By Industry</h5>
         <!--Industry menu Start-->
         <ul class="quicklinks">
-          <li><a href="#.">Information Technology Jobs</a></li>
-          <li><a href="#.">Recruitment/Employment Firms Jobs</a></li>
-          <li><a href="#.">Education/Training Jobs</a></li>
-          <li><a href="#.">Manufacturing Jobs</a></li>
-          <li><a href="#.">Call Center Jobs</a></li>
-          <li><a href="#.">N.G.O./Social Services Jobs</a></li>
-          <li><a href="#.">BPO Jobs</a></li>
-          <li><a href="#.">Textiles/Garments Jobs</a></li>
-          <li><a href="#.">Telecommunication/ISP Jobs</a></li>
+          <li><a href=" {% static '#.' %} ">Information Technology Jobs</a></li>
+          <li><a href=" {% static '#.' %} ">Recruitment/Employment Firms Jobs</a></li>
+          <li><a href=" {% static '#.' %} ">Education/Training Jobs</a></li>
+          <li><a href=" {% static '#.' %} ">Manufacturing Jobs</a></li>
+          <li><a href=" {% static '#.' %} ">Call Center Jobs</a></li>
+          <li><a href=" {% static '#.' %} ">N.G.O./Social Services Jobs</a></li>
+          <li><a href=" {% static '#.' %} ">BPO Jobs</a></li>
+          <li><a href=" {% static '#.' %} ">Textiles/Garments Jobs</a></li>
+          <li><a href=" {% static '#.' %} ">Telecommunication/ISP Jobs</a></li>
         </ul>
         <!--Industry menu End-->
         <div class="clear"></div>
@@ -771,9 +772,9 @@
           <li>
             <article class="post post-list">
               <div class="entry-content media">
-                <div class="media-left"> <a href="#." title="" class="entry-image"> <img width="80" height="80" src="images/news-1.jpg" alt="Your alt text here"> </a> </div>
+                <div class="media-left"> <a href=" {% static '#.' %} " title="" class="entry-image"> <img width="80" height="80" src=" {% static 'images/news-1.jpg' %} " alt="Your alt text here"> </a> </div>
                 <div class="media-body">
-                  <h4 class="entry-title"> <a href="#.">Sed fermentum at lectus nec porta.</a> </h4>
+                  <h4 class="entry-title"> <a href=" {% static '#.' %} ">Sed fermentum at lectus nec porta.</a> </h4>
                   <div class="entry-content-inner">
                     <div class="entry-meta"> <span class="entry-date">Jan 28, 2016</span> </div>
                   </div>
@@ -787,9 +788,9 @@
           <li>
             <article class="post post-list">
               <div class="entry-content media">
-                <div class="media-left"> <a href="#." title="" class="entry-image"> <img width="80" height="80" src="images/news-2.jpg" alt="Your alt text here"> </a> </div>
+                <div class="media-left"> <a href=" {% static '#.' %} " title="" class="entry-image"> <img width="80" height="80" src=" {% static 'images/news-2.jpg' %} " alt="Your alt text here"> </a> </div>
                 <div class="media-body">
-                  <h4 class="entry-title"> <a href="#.">Sed fermentum at lectus nec porta.</a> </h4>
+                  <h4 class="entry-title"> <a href=" {% static '#.' %} ">Sed fermentum at lectus nec porta.</a> </h4>
                   <div class="entry-content-inner">
                     <div class="entry-meta"> <span class="entry-date">Jan 28, 2016</span> </div>
                   </div>
@@ -803,9 +804,9 @@
           <li>
             <article class="post post-list">
               <div class="entry-content media">
-                <div class="media-left"> <a href="#." title="" class="entry-image"> <img width="80" height="80" src="images/news-3.jpg" alt="Your alt text here"> </a> </div>
+                <div class="media-left"> <a href=" {% static '#.' %} " title="" class="entry-image"> <img width="80" height="80" src=" {% static 'images/news-3.jpg' %} " alt="Your alt text here"> </a> </div>
                 <div class="media-body">
-                  <h4 class="entry-title"> <a href="#.">Sed fermentum at lectus nec porta.</a> </h4>
+                  <h4 class="entry-title"> <a href=" {% static '#.' %} ">Sed fermentum at lectus nec porta.</a> </h4>
                   <div class="entry-content-inner">
                     <div class="entry-meta"> <span class="entry-date">Jan 28, 2016</span> </div>
                   </div>
@@ -829,14 +830,14 @@
 </div>
 
 <!-- Bootstrap's JavaScript --> 
-<script src="js/jquery-2.1.4.min.js"></script> 
-<script src="js/bootstrap.min.js"></script> 
+<script src=" {% static 'js/jquery-2.1.4.min.js' %} "></script> 
+<script src=" {% static 'js/bootstrap.min.js' %} "></script> 
 
 <!-- Owl carousel --> 
-<script src="js/owl.carousel.js"></script> 
+<script src=" {% static 'js/owl.carousel.js' %} "></script> 
 
 <!-- Custom js --> 
-<script src="js/script.js"></script>
+<script src=" {% static 'js/script.js' %} "></script>
 </body>
 
 <!-- Mirrored from www.sharjeelanjum.com/html/jobs-portal/demo/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Mar 2022 15:17:38 GMT -->
