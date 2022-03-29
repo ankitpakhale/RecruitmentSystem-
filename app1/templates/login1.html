@@ -123,20 +123,23 @@
           <h5>User Login</h5>
           <!-- login form -->
           <div class="formpanel">
+
             <div class="formrow">
-              <input type="text" class="form-control" placeholder="Username">
+              <input type="text" class="form-control" name="email" placeholder="Username">
             </div>
+
             <div class="formrow">
-              <input type="text" class="form-control" placeholder="Password">
+              <input type="password" class="form-control" name="password" placeholder="Password">
             </div>
+            
             <input type="submit" class="btn" value="Login">
           </div>
           <!-- login form  end--> 
-          
+
           <!-- sign up form -->
-          <div class="newuser"><i class="fa fa-user" aria-hidden="true"></i> New User? <a href=" {% static '#.' %} ">Register Here</a></div>
-          <!-- sign up form end--> 
-          
+          <div class="newuser"><i class="fa fa-user" aria-hidden="true"></i> New User? <a href=" {% url 'app1:SIGNUP' %} ">Register Here</a></div>
+          <!-- sign up form end-->
+
         </div>
       </div>
     </div>
@@ -194,7 +197,7 @@
         <!--Industry menu End-->
         <div class="clear"></div>
       </div>
-      
+
       <!--Latest Articles-->
       <div class="col-md-4 col-sm-12">
         <h5>Latest Articles</h5>

@@ -1,6 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,13 +33,14 @@
 <![endif]-->
 
 </head>
+
 <body>
   <!-- Header start -->
   <div class="header">
     <div class="container">
       <div class="row">
-        <div class="col-md-2 col-sm-3 col-xs-12"> <a href=" {% url 'app1:HOME' %} " class="logo"><img src=" {% static 'images/logo.png' %}' "
-              alt="" /></a>
+        <div class="col-md-2 col-sm-3 col-xs-12"> <a href=" {% url 'app1:HOME' %} " class="logo"><img
+              src=" {% static 'images/logo.png' %}' " alt="" /></a>
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span
                 class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span>
@@ -98,216 +100,239 @@
   <!-- Header end -->
 
 
-<!-- Page Title start -->
-<div class="pageTitle">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-sm-6">
-        <h1 class="page-heading">Register</h1>
-      </div>
-      <div class="col-md-6 col-sm-6">
-        <div class="breadCrumb"><a href=" {% static '#.' %} ">Home</a> / <span>Register</span></div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Page Title End -->
-
-<div class="listpgWraper">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <div class="userccount">
-          <div class="socialLogin">
-            <h5>Login Or Register with Social</h5>
-            <a href=" {% static '#.' %} " class="fb"><i class="fa fa-facebook" aria-hidden="true"></i></a> <a href="#." class="gp"><i class="fa fa-google-plus" aria-hidden="true"></i></a> <a href="#." class="tw"><i class="fa fa-twitter" aria-hidden="true"></i></a> </div>
-          <div class="alert alert-success" role="alert"><strong>Well done!</strong> Your account successfully created.</div>
-          <div class="alert alert-warning" role="alert"><strong>Warning!</strong> Better check yourself, you're not looking too good.</div>
-          <div class="alert alert-danger" role="alert"><strong>Oh snap!</strong> Change a few things up and try submitting again.</div>
-          <div class="userbtns">
-            <ul class="nav nav-tabs">
-              <li class="active"><a data-toggle="tab" href=" {% static '#candidate' %} ">Candidate</a></li>
-              <li><a data-toggle="tab" href=" {% static '#employer' %} ">Employer</a></li>
-            </ul>
-          </div>
-          <div class="tab-content">
-            <div id="candidate" class="formpanel tab-pane fade in active">
-              <div class="formrow">
-                <input type="text" name="name" class="form-control" placeholder="Full Name">
-              </div>
-              <div class="formrow">
-                <input type="text" name="username" class="form-control" placeholder="Username">
-              </div>
-              <div class="formrow">
-                <input type="text" name="email" class="form-control" placeholder="Email">
-              </div>
-              <div class="formrow">
-                <input type="text" name="password" class="form-control" placeholder="Password">
-              </div>
-              <div class="formrow">
-                <input type="text" name="conpass" class="form-control" placeholder="Confirm Password">
-              </div>
-              <div class="formrow">
-                <input type="checkbox" value="agree text" name="agree" />
-                There are many variations of passages of Lorem Ipsum available</div>
-              <input type="submit" class="btn" value="Register">
-            </div>
-            <div id="employer" class="formpanel tab-pane fade in">
-              <div class="formrow">
-                <input type="text" name="cname" class="form-control" placeholder="Company Name">
-              </div>
-              <div class="formrow">
-                <input type="text" name="cusername" class="form-control" placeholder="Username">
-              </div>
-              <div class="formrow">
-                <input type="text" name="cemail" class="form-control" placeholder="Email">
-              </div>
-              <div class="formrow">
-                <input type="text" name="cpass" class="form-control" placeholder="Password">
-              </div>
-              <div class="formrow">
-                <input type="text" name="cpass" class="form-control" placeholder="Confirm Password">
-              </div>
-              <div class="formrow">
-                <input type="checkbox" value="agree text c" name="cagree" />
-                There are many variations of passages of Lorem Ipsum available</div>
-              <input type="submit" class="btn" value="Register">
-            </div>
-          </div>
-          <div class="newuser"><i class="fa fa-user" aria-hidden="true"></i> Already a Member? <a href=" {% static '#.' %} ">Login Here</a></div>
+  <!-- Page Title start -->
+  <div class="pageTitle">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-6">
+          <h1 class="page-heading">Register</h1>
+        </div>
+        <div class="col-md-6 col-sm-6">
+          <div class="breadCrumb"><a href=" {% static '#.' %} ">Home</a> / <span>Register</span></div>
         </div>
       </div>
     </div>
   </div>
-</div>
+  <!-- Page Title End -->
 
-<!--Footer-->
-<div class="footerWrap">
-  <div class="container">
-    <div class="row"> 
-      <!--About Us-->
-      <div class="col-md-3 col-sm-12">
-        <div class="ft-logo"><img src=" {% static 'images/logo.png' %} " alt="Your alt text here"></div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et consequat elit. Proin molestie eros sed urna auctor lobortis. Integer eget scelerisque arcu. Pellentesque scelerisque pellentesque nisl, sit amet aliquam mi pellentesque fringilla. Ut porta augue a libero pretium laoreet. Suspendisse sit amet massa accumsan, pulvinar augue id, tristique tortor.</p>
-        
-        <!-- Social Icons -->
-        <div class="social"> <a href=" {% static '#.' %} " target="_blank"> <i class="fa fa-facebook-square" aria-hidden="true"></i></a> <a href="#." target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a> <a href="#." target="_blank"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a> <a href="#." target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a> <a href="#." target="_blank"><i class="fa fa-youtube-square" aria-hidden="true"></i></a> </div>
-        <!-- Social Icons end --> 
-      </div>
-      <!--About us End--> 
-      
-      <!--Quick Links-->
-      <div class="col-md-2 col-sm-6">
-        <h5>Quick Links</h5>
-        <!--Quick Links menu Start-->
-        <ul class="quicklinks">
-          <li><a href=" {% static '#.' %} ">Career Services</a></li>
-          <li><a href=" {% static '#.' %} ">CV Writing</a></li>
-          <li><a href=" {% static '#.' %} ">Career Resources</a></li>
-          <li><a href=" {% static '#.' %} ">Company Listings</a></li>
-          <li><a href=" {% static '#.' %} ">Success Stories</a></li>
-          <li><a href=" {% static '#.' %} ">Contact Us</a></li>
-          <li><a href=" {% static '#.' %} ">Create Account</a></li>
-          <li><a href=" {% static '#.' %} ">Post a Job</a></li>
-          <li><a href=" {% static '#.' %} ">Contact Sales</a></li>
-        </ul>
-      </div>
-      <!--Quick Links menu end--> 
-      
-      <!--Jobs By Industry-->
-      <div class="col-md-3 col-sm-6">
-        <h5>Jobs By Industry</h5>
-        <!--Industry menu Start-->
-        <ul class="quicklinks">
-          <li><a href=" {% static '#.' %} ">Information Technology Jobs</a></li>
-          <li><a href=" {% static '#.' %} ">Recruitment/Employment Firms Jobs</a></li>
-          <li><a href=" {% static '#.' %} ">Education/Training Jobs</a></li>
-          <li><a href=" {% static '#.' %} ">Manufacturing Jobs</a></li>
-          <li><a href=" {% static '#.' %} ">Call Center Jobs</a></li>
-          <li><a href=" {% static '#.' %} ">N.G.O./Social Services Jobs</a></li>
-          <li><a href=" {% static '#.' %} ">BPO Jobs</a></li>
-          <li><a href=" {% static '#.' %} ">Textiles/Garments Jobs</a></li>
-          <li><a href=" {% static '#.' %} ">Telecommunication/ISP Jobs</a></li>
-        </ul>
-        <!--Industry menu End-->
-        <div class="clear"></div>
-      </div>
-      
-      <!--Latest Articles-->
-      <div class="col-md-4 col-sm-12">
-        <h5>Latest Articles</h5>
-        <ul class="posts-list">
-          <!--Article 1-->
-          <li>
-            <article class="post post-list">
-              <div class="entry-content media">
-                <div class="media-left"> <a href=" {% static '#.' %} " title="" class="entry-image"> <img width="80" height="80" src=" {% static 'images/news-1.jpg' %} " alt="Your alt text here"> </a> </div>
-                <div class="media-body">
-                  <h4 class="entry-title"> <a href=" {% static '#.' %} ">Sed fermentum at lectus nec porta.</a> </h4>
-                  <div class="entry-content-inner">
-                    <div class="entry-meta"> <span class="entry-date">Jan 28, 2016</span> </div>
+  <div class="listpgWraper">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <div class="userccount">
+            <div class="socialLogin">
+              <h5>Login Or Register with Social</h5>
+              <a href=" {% static '#.' %} " class="fb"><i class="fa fa-facebook" aria-hidden="true"></i></a> <a
+                href="#." class="gp"><i class="fa fa-google-plus" aria-hidden="true"></i></a> <a href="#." class="tw"><i
+                  class="fa fa-twitter" aria-hidden="true"></i></a>
+            </div>
+
+            <!-- <div class="alert alert-success" role="alert"><strong>Well done!</strong> Your account successfully created.</div>
+          <div class="alert alert-warning" role="alert"><strong>Warning!</strong> Better check yourself, you're not looking too good.</div>
+          <div class="alert alert-danger" role="alert"><strong>Oh snap!</strong> Change a few things up and try submitting again.</div> -->
+
+            <div class="tab-content">
+              <form method="POST">
+                {% csrf_token %}
+                <div id="candidate" class="formpanel tab-pane fade in active">
+                  <div class="formrow">
+                    <input required="required" type="text" name="name" class="form-control" placeholder="Full Name">
                   </div>
-                </div>
-              </div>
-            </article>
-          </li>
-          <!--Article end 1--> 
-          
-          <!--Article 2-->
-          <li>
-            <article class="post post-list">
-              <div class="entry-content media">
-                <div class="media-left"> <a href=" {% static '#.' %} " title="" class="entry-image"> <img width="80" height="80" src=" {% static 'images/news-2.jpg' %} " alt="Your alt text here"> </a> </div>
-                <div class="media-body">
-                  <h4 class="entry-title"> <a href=" {% static '#.' %} ">Sed fermentum at lectus nec porta.</a> </h4>
-                  <div class="entry-content-inner">
-                    <div class="entry-meta"> <span class="entry-date">Jan 28, 2016</span> </div>
+
+                  <div class="formrow">
+                    <input required="required" type="text" name="email" class="form-control" placeholder="Email">
                   </div>
-                </div>
-              </div>
-            </article>
-          </li>
-          <!--Article end 2--> 
-          
-          <!--Article 3-->
-          <li>
-            <article class="post post-list">
-              <div class="entry-content media">
-                <div class="media-left"> <a href=" {% static '#.' %} " title="" class="entry-image"> <img width="80" height="80" src=" {% static 'images/news-3.jpg' %} " alt="Your alt text here"> </a> </div>
-                <div class="media-body">
-                  <h4 class="entry-title"> <a href=" {% static '#.' %} ">Sed fermentum at lectus nec porta.</a> </h4>
-                  <div class="entry-content-inner">
-                    <div class="entry-meta"> <span class="entry-date">Jan 28, 2016</span> </div>
+
+                  <div class="formrow">
+                    <input required="required" type="number" name="number" class="form-control" placeholder="Phone">
                   </div>
+                  <div class="formrow">
+                    <input required="required" type="text" name="address" class="form-control" placeholder="Address">
+                  </div>
+                  <div class="formrow">
+                    <input required="required" type="text" name="password" class="form-control" placeholder="Password">
+                  </div>
+                  <div class="formrow">
+                    <input required="required" type="text" name="confirmPassword" class="form-control"
+                      placeholder="Confirm Password">
+                  </div>
+
+
+                  <div class="formrow">
+                    <select class="form-control" name="cat">
+                      <option value="" disabled selected hidden>Who are you?</option>
+                      <option value="stu">Student</option>
+                      <!-- Python -->
+                      <option value="rec">Recruiter</option>
+                      <!-- Java -->
+
+                    </select>
+                  </div>
+
+                  <div class="formrow">
+                    <input type="checkbox" value="agree text" name="agree" />
+                    There are many variations of passages of Lorem Ipsum available
+                  </div>
+                  <input type="submit" class="btn" value="Register">
+
                 </div>
-              </div>
-            </article>
-          </li>
-          <!--Article end 3-->
-        </ul>
+              </form>
+
+            </div>
+            <div class="newuser"><i class="fa fa-user" aria-hidden="true"></i> Already a Member? <a
+                href=" {% url 'app1:LOGIN1' %} ">Login Here</a></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<!--Footer end--> 
 
-<!--Copyright-->
-<div class="copyright">
-  <div class="container">
-    <div class="bttxt">Copyright &copy; 2017 Your Company Name. All Rights Reserved. Design by: <a href="http://graphicriver.net/user/ecreativesol" target="_blank">eCreativeSolutions</a></div>
+
+  {% if msg %}
+  <script>alert('{{msg}}')</script>
+  {% endif %}
+
+
+  <!--Footer-->
+  <div class="footerWrap">
+    <div class="container">
+      <div class="row">
+        <!--About Us-->
+        <div class="col-md-3 col-sm-12">
+          <div class="ft-logo"><img src=" {% static 'images/logo.png' %} " alt="Your alt text here"></div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et consequat elit. Proin molestie eros sed
+            urna auctor lobortis. Integer eget scelerisque arcu. Pellentesque scelerisque pellentesque nisl, sit amet
+            aliquam mi pellentesque fringilla. Ut porta augue a libero pretium laoreet. Suspendisse sit amet massa
+            accumsan, pulvinar augue id, tristique tortor.</p>
+
+          <!-- Social Icons -->
+          <div class="social"> <a href=" {% static '#.' %} " target="_blank"> <i class="fa fa-facebook-square"
+                aria-hidden="true"></i></a> <a href="#." target="_blank"><i class="fa fa-twitter-square"
+                aria-hidden="true"></i></a> <a href="#." target="_blank"><i class="fa fa-google-plus-square"
+                aria-hidden="true"></i></a> <a href="#." target="_blank"><i class="fa fa-linkedin-square"
+                aria-hidden="true"></i></a> <a href="#." target="_blank"><i class="fa fa-youtube-square"
+                aria-hidden="true"></i></a> </div>
+          <!-- Social Icons end -->
+        </div>
+        <!--About us End-->
+
+        <!--Quick Links-->
+        <div class="col-md-2 col-sm-6">
+          <h5>Quick Links</h5>
+          <!--Quick Links menu Start-->
+          <ul class="quicklinks">
+            <li><a href=" {% static '#.' %} ">Career Services</a></li>
+            <li><a href=" {% static '#.' %} ">CV Writing</a></li>
+            <li><a href=" {% static '#.' %} ">Career Resources</a></li>
+            <li><a href=" {% static '#.' %} ">Company Listings</a></li>
+            <li><a href=" {% static '#.' %} ">Success Stories</a></li>
+            <li><a href=" {% static '#.' %} ">Contact Us</a></li>
+            <li><a href=" {% static '#.' %} ">Create Account</a></li>
+            <li><a href=" {% static '#.' %} ">Post a Job</a></li>
+            <li><a href=" {% static '#.' %} ">Contact Sales</a></li>
+          </ul>
+        </div>
+        <!--Quick Links menu end-->
+
+        <!--Jobs By Industry-->
+        <div class="col-md-3 col-sm-6">
+          <h5>Jobs By Industry</h5>
+          <!--Industry menu Start-->
+          <ul class="quicklinks">
+            <li><a href=" {% static '#.' %} ">Information Technology Jobs</a></li>
+            <li><a href=" {% static '#.' %} ">Recruitment/Employment Firms Jobs</a></li>
+            <li><a href=" {% static '#.' %} ">Education/Training Jobs</a></li>
+            <li><a href=" {% static '#.' %} ">Manufacturing Jobs</a></li>
+            <li><a href=" {% static '#.' %} ">Call Center Jobs</a></li>
+            <li><a href=" {% static '#.' %} ">N.G.O./Social Services Jobs</a></li>
+            <li><a href=" {% static '#.' %} ">BPO Jobs</a></li>
+            <li><a href=" {% static '#.' %} ">Textiles/Garments Jobs</a></li>
+            <li><a href=" {% static '#.' %} ">Telecommunication/ISP Jobs</a></li>
+          </ul>
+          <!--Industry menu End-->
+          <div class="clear"></div>
+        </div>
+
+        <!--Latest Articles-->
+        <div class="col-md-4 col-sm-12">
+          <h5>Latest Articles</h5>
+          <ul class="posts-list">
+            <!--Article 1-->
+            <li>
+              <article class="post post-list">
+                <div class="entry-content media">
+                  <div class="media-left"> <a href=" {% static '#.' %} " title="" class="entry-image"> <img width="80"
+                        height="80" src=" {% static 'images/news-1.jpg' %} " alt="Your alt text here"> </a> </div>
+                  <div class="media-body">
+                    <h4 class="entry-title"> <a href=" {% static '#.' %} ">Sed fermentum at lectus nec porta.</a> </h4>
+                    <div class="entry-content-inner">
+                      <div class="entry-meta"> <span class="entry-date">Jan 28, 2016</span> </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <!--Article end 1-->
+
+            <!--Article 2-->
+            <li>
+              <article class="post post-list">
+                <div class="entry-content media">
+                  <div class="media-left"> <a href=" {% static '#.' %} " title="" class="entry-image"> <img width="80"
+                        height="80" src=" {% static 'images/news-2.jpg' %} " alt="Your alt text here"> </a> </div>
+                  <div class="media-body">
+                    <h4 class="entry-title"> <a href=" {% static '#.' %} ">Sed fermentum at lectus nec porta.</a> </h4>
+                    <div class="entry-content-inner">
+                      <div class="entry-meta"> <span class="entry-date">Jan 28, 2016</span> </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <!--Article end 2-->
+
+            <!--Article 3-->
+            <li>
+              <article class="post post-list">
+                <div class="entry-content media">
+                  <div class="media-left"> <a href=" {% static '#.' %} " title="" class="entry-image"> <img width="80"
+                        height="80" src=" {% static 'images/news-3.jpg' %} " alt="Your alt text here"> </a> </div>
+                  <div class="media-body">
+                    <h4 class="entry-title"> <a href=" {% static '#.' %} ">Sed fermentum at lectus nec porta.</a> </h4>
+                    <div class="entry-content-inner">
+                      <div class="entry-meta"> <span class="entry-date">Jan 28, 2016</span> </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <!--Article end 3-->
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+  <!--Footer end-->
 
-<!-- Bootstrap's JavaScript --> 
-<script src=" {% static 'js/jquery-2.1.4.min.js' %} "></script> 
-<script src=" {% static 'js/bootstrap.min.js' %} "></script> 
+  <!--Copyright-->
+  <div class="copyright">
+    <div class="container">
+      <div class="bttxt">Copyright &copy; 2017 Your Company Name. All Rights Reserved. Design by: <a
+          href="http://graphicriver.net/user/ecreativesol" target="_blank">eCreativeSolutions</a></div>
+    </div>
+  </div>
 
-<!-- Owl carousel --> 
-<script src=" {% static 'js/owl.carousel.js' %} "></script> 
+  <!-- Bootstrap's JavaScript -->
+  <script src=" {% static 'js/jquery-2.1.4.min.js' %} "></script>
+  <script src=" {% static 'js/bootstrap.min.js' %} "></script>
 
-<!-- Custom js --> 
-<script src=" {% static 'js/script.js' %} "></script>
+  <!-- Owl carousel -->
+  <script src=" {% static 'js/owl.carousel.js' %} "></script>
+
+  <!-- Custom js -->
+  <script src=" {% static 'js/script.js' %} "></script>
 </body>
 
 <!-- Mirrored from www.sharjeelanjum.com/html/jobs-portal/demo/register.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Mar 2022 15:17:40 GMT -->
+
 </html>

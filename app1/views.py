@@ -16,6 +16,7 @@ def hello(request):
     return HttpResponse("You are in school recruitment system................")
 
 def SignupView(request):
+    print("signup")
     if request.POST: 
         Name = request.POST['name']
         Email = request.POST['email']
@@ -29,7 +30,7 @@ def SignupView(request):
             data = signUp.objects.filter(email=Email)
             if data:
                 msg = "Email already registered"
-                return render(request, 'signup.html', {'msg': msg})
+                return render(request, 'register.html', {'msg': msg})
             elif ConfirmPassword == Password:
                 v = signUp()
                 v.name = Name
@@ -45,13 +46,14 @@ def SignupView(request):
                     v.isStu = Category
                 v.save()
                 print(f"{v.name} Signed up successfully")
-                return redirect('app1:LOGIN')
+                return redirect('app1:LOGIN1')
             else:
                 msg = 'Please Enter Same Password'
-                return render(request , 'signup.html',{'msg':msg}) 
+                return render(request , 'register.html',{'msg':msg}) 
         finally:
             messages.success(request, 'Signup Successfully Done...')
-    return render(request,'signup.html')
+    # return render(request,'signup.html')
+    return render(request,'register.html')
 
 def userLogin(request):
     if request.POST:
