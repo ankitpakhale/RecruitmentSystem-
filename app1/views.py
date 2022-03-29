@@ -112,16 +112,19 @@ def dashboard(request):
             q = details
         print(q)
         return render(request,'dashboard.html', {'name': name, 'student': student, 'details': details, 's':q})
-    return redirect('app1:LOGIN')
+    return redirect('app1:LOGIN1')
 
 def userLogOut(request):
     del request.session['email']
     print('User logged out successfully')
     return redirect('app1:LOGIN1')
 
-
 def home(request):
-    return render(request,'index3.html')
+    if 'email' in request.session:
+        student1 = signUp.objects.get(email=request.session['email'])
+        student = student1.isStu
+        return render(request,'index3.html', {'student': student})
+    return redirect('app1:LOGIN1')
 
 def notFound(request):
     return render(request,'404.html')
@@ -142,29 +145,32 @@ def blog(request):
     return render(request,'blog.html')
 
 def candidateDetails(request):
-    key = ''
     if 'email' in request.session:
-        
-        if request.POST: 
-            # saving data in database
-            data = studentData()
-            data.name = request.POST['name']
-            data.email = request.POST['email']
-            data.city = request.POST['city']
-            data.dob = request.POST['dob']
-            data.uname = request.POST['uname']
-            data.cname = request.POST['cname']
-            data.pyear = request.POST['pyear']
-            data.spi = request.POST['spi']
-            data.pl = request.POST['pl']
-            data.description = request.POST['description']
-            data.save()
-            key = "Data Successfully Submitted"
-            print(key)
-        # search module start
-        print("Inside search module")
-        return render(request,'candidate-detail.html', {'key': key})
-    return redirect('app1:LOGIN')
+        key = ''
+        if 'email' in request.session:
+            
+            if request.POST: 
+                # saving data in database
+                data = studentData()
+                data.name = request.POST['name']
+                data.email = request.POST['email']
+                data.city = request.POST['city']
+                data.dob = request.POST['dob']
+                data.uname = request.POST['uname']
+                data.cname = request.POST['cname']
+                data.pyear = request.POST['pyear']
+                data.spi = request.POST['spi']
+                data.pl = request.POST['pl']
+                data.description = request.POST['description']
+                data.save()
+                key = "Data Successfully Submitted"
+                print(key)
+            # search module start
+            print("Inside search module")
+            return render(request,'candidate-detail.html', {'key': key})
+        return redirect('app1:LOGIN')
+    return redirect('app1:LOGIN1')
+
 
 def candidateListing(request):
     return render(request,'candidate-listing.html')

@@ -8,10 +8,10 @@ urlpatterns = [
     path('hello/',views.hello, name='HELLO'),
     path('signup/',views.SignupView, name='SIGNUP'),
     path('login/', views.userLogin, name='LOGIN1'),
-    path('', views.dashboard, name='DASHBOARD'),
+    path('dash/', views.dashboard, name='DASHBOARD'),
     path('logout/', views.userLogOut, name='LOGOUT'), 
 
-    path('home/', views.home, name='HOME'),
+    path('', views.home, name='HOME'),
     path('notfound/', views.notFound, name='NOTFOUND'), 
     path('about/', views.about, name='ABOUT'), 
     path('blogdetails/', views.blogDetails, name='BLOGDETAILS'), 

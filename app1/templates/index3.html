@@ -54,14 +54,21 @@
               <ul class="nav navbar-nav">
                 <li class="dropdown active"><a href=" {% url 'app1:HOME' %} ">Home  </a></li>
                 <li><a href=" {% url 'app1:ABOUT' %} ">About us</a></li>
-                <li><a href=" {% url 'app1:JOBLISTING' %} ">Job Listing</a></li>
 
+
+                {% if student %}
                 <li><a href=" {% url 'app1:CANDIDATEDETAILS' %} ">Candidate Appication Form</a></li>
+                {% else %}
+                <li><a href=" {% url 'app1:JOBLISTING' %} ">Job Listing</a></li>
+                {% endif %}
+
 
                 <li class="dropdown"><a href=" {% static '#.' %} ">Pages <span class="caret"></span></a>
                   <!-- dropdown start -->
                   <ul class="dropdown-menu">
-                                       <li><a href=" {% url 'app1:JOBDETAILS' %} ">Job Detail</a></li>
+                     <li><a href=" {% url 'app1:JOBDETAILS' %} ">Job Detail</a></li>
+
+
                     <li><a href=" {% url 'app1:CANDIDATELISTING' %} ">Candidate Listing</a></li>
 
                     <li><a href=" {% url 'app1:COMPDETAILS' %} ">Company Profile</a></li>
@@ -96,8 +103,8 @@
   </div>
   <!-- Header end -->
 
-  <!-- Revolution slider start -->
-  <div class="tp-banner-container">
+   <!-- Revolution slider start -->
+   <div class="tp-banner-container">
     <div class="tp-banner">
       <ul>
         <!--Slide-->
@@ -794,151 +801,123 @@
     </div>
   </div>
   <!-- App End -->
+<!--Footer-->
+<div class="footerWrap">
+  <div class="container">
+    <div class="row">
+      <!--About Us-->
+      <div class="col-md-3 col-sm-12">
+        <div class="ft-logo"><img src=" {% static 'images/logo.png' %} " alt="Your alt text here"></div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et consequat elit. Proin molestie eros sed
+          urna auctor lobortis. Integer eget scelerisque arcu. Pellentesque scelerisque pellentesque nisl.</p>
 
-  <!--Footer-->
-  <div class="footerWrap">
-    <div class="container">
-      <div class="row">
-        <!--About Us-->
-        <div class="col-md-3 col-sm-12">
-          <div class="ft-logo"><img src=" {% static 'images/logo.png' %} " alt="Your alt text here"></div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et consequat elit. Proin molestie eros sed
-            urna auctor lobortis. Integer eget scelerisque arcu. Pellentesque scelerisque pellentesque nisl, sit amet
-            aliquam mi pellentesque fringilla. Ut porta augue a libero pretium laoreet. Suspendisse sit amet massa
-            accumsan, pulvinar augue id, tristique tortor.</p>
+        <!-- Social Icons -->
+        <div class="social"> <a href=" {% static '#.' %} " target="_blank"> <i class="fa fa-facebook-square"
+              aria-hidden="true"></i></a> <a href="#." target="_blank"><i class="fa fa-twitter-square"
+              aria-hidden="true"></i></a> <a href="#." target="_blank"><i class="fa fa-google-plus-square"
+              aria-hidden="true"></i></a> <a href="#." target="_blank"><i class="fa fa-linkedin-square"
+              aria-hidden="true"></i></a> <a href="#." target="_blank"><i class="fa fa-youtube-square"
+              aria-hidden="true"></i></a> </div>
+        <!-- Social Icons end -->
+      </div>
+      <!--About us End-->
 
-          <!-- Social Icons -->
-          <div class="social"> <a href=" {% static '#.' %} " target="_blank"> <i class="fa fa-facebook-square"
-                aria-hidden="true"></i></a> <a href=" {% static '#.' %} " target="_blank"><i
-                class="fa fa-twitter-square" aria-hidden="true"></i></a> <a href=" {% static '#.' %} "
-              target="_blank"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a> <a
-              href=" {% static '#.' %} " target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a> <a
-              href=" {% static '#.' %} " target="_blank"><i class="fa fa-youtube-square" aria-hidden="true"></i></a>
-          </div>
-          <!-- Social Icons end -->
-        </div>
-        <!--About us End-->
+      <!--Quick Links-->
+      <div class="col-md-2 col-sm-6">
+        <h5>Quick Links</h5>
+        <!--Quick Links menu Start-->
+        <ul class="quicklinks">
+          <li><a href=" {% static '#.' %} ">Career Services</a></li>
+          <li><a href=" {% static '#.' %} ">CV Writing</a></li>
+          <li><a href=" {% static '#.' %} ">Career Resources</a></li>
+          <li><a href=" {% static '#.' %} ">Company Listings</a></li>
+          <li><a href=" {% static '#.' %} ">Success Stories</a></li>
+          <li><a href=" {% static '#.' %} ">Contact Us</a></li>
+        </ul>
+      </div>
+      <!--Quick Links menu end-->
 
-        <!--Quick Links-->
-        <div class="col-md-2 col-sm-6">
-          <h5>Quick Links</h5>
-          <!--Quick Links menu Start-->
-          <ul class="quicklinks">
-            <li><a href=" {% static '#.' %} ">Career Services</a></li>
-            <li><a href=" {% static '#.' %} ">CV Writing</a></li>
-            <li><a href=" {% static '#.' %} ">Career Resources</a></li>
-            <li><a href=" {% static '#.' %} ">Company Listings</a></li>
-            <li><a href=" {% static '#.' %} ">Success Stories</a></li>
-            <li><a href=" {% static '#.' %} ">Contact Us</a></li>
-            <li><a href=" {% static '#.' %} ">Create Account</a></li>
-            <li><a href=" {% static '#.' %} ">Post a Job</a></li>
-            <li><a href=" {% static '#.' %} ">Contact Sales</a></li>
-          </ul>
-        </div>
-        <!--Quick Links menu end-->
+      <!--Jobs By Industry-->
+      <div class="col-md-3 col-sm-6">
+        <h5>Jobs By Industry</h5>
+        <!--Industry menu Start-->
+        <ul class="quicklinks">
+          <li><a href=" {% static '#.' %} ">Information Technology Jobs</a></li>
+          <li><a href=" {% static '#.' %} ">Recruitment/Employment Firms Jobs</a></li>
+          <li><a href=" {% static '#.' %} ">Education/Training Jobs</a></li>
+          <li><a href=" {% static '#.' %} ">Manufacturing Jobs</a></li>
+          <li><a href=" {% static '#.' %} ">Call Center Jobs</a></li>
+          <li><a href=" {% static '#.' %} ">N.G.O./Social Services Jobs</a></li>
+        </ul>
+        <!--Industry menu End-->
+        <div class="clear"></div>
+      </div>
 
-        <!--Jobs By Industry-->
-        <div class="col-md-3 col-sm-6">
-          <h5>Jobs By Industry</h5>
-          <!--Industry menu Start-->
-          <ul class="quicklinks">
-            <li><a href=" {% static '#.' %} ">Information Technology Jobs</a></li>
-            <li><a href=" {% static '#.' %} ">Recruitment/Employment Firms Jobs</a></li>
-            <li><a href=" {% static '#.' %} ">Education/Training Jobs</a></li>
-            <li><a href=" {% static '#.' %} ">Manufacturing Jobs</a></li>
-            <li><a href=" {% static '#.' %} ">Call Center Jobs</a></li>
-            <li><a href=" {% static '#.' %} ">N.G.O./Social Services Jobs</a></li>
-            <li><a href=" {% static '#.' %} ">BPO Jobs</a></li>
-            <li><a href=" {% static '#.' %} ">Textiles/Garments Jobs</a></li>
-            <li><a href=" {% static '#.' %} ">Telecommunication/ISP Jobs</a></li>
-          </ul>
-          <!--Industry menu End-->
-          <div class="clear"></div>
-        </div>
-
-        <!--Latest Articles-->
-        <div class="col-md-4 col-sm-12">
-          <h5>Latest Articles</h5>
-          <ul class="posts-list">
-            <!--Article 1-->
-            <li>
-              <article class="post post-list">
-                <div class="entry-content media">
-                  <div class="media-left"> <a href=" {% static '#.' %} " title="" class="entry-image"> <img width="80"
-                        height="80" src=" {% static 'images/news-1.jpg' %} " alt="Your alt text here"> </a> </div>
-                  <div class="media-body">
-                    <h4 class="entry-title"> <a href=" {% static '#.' %} ">Sed fermentum at lectus nec porta.</a> </h4>
-                    <div class="entry-content-inner">
-                      <div class="entry-meta"> <span class="entry-date">Jan 28, 2016</span> </div>
-                    </div>
+      <!--Latest Articles-->
+      <div class="col-md-4 col-sm-12">
+        <h5>Latest Articles</h5>
+        <ul class="posts-list">
+          <!--Article 1-->
+          <li>
+            <article class="post post-list">
+              <div class="entry-content media">
+                <div class="media-left"> <a href=" {% static '#.' %} " title="" class="entry-image"> <img width="80"
+                      height="80" src=" {% static 'images/news-1.jpg' %} " alt="Your alt text here"> </a> </div>
+                <div class="media-body">
+                  <h4 class="entry-title"> <a href=" {% static '#.' %} ">Sed fermentum at lectus nec porta.</a> </h4>
+                  <div class="entry-content-inner">
+                    <div class="entry-meta"> <span class="entry-date">Jan 28, 2016</span> </div>
                   </div>
                 </div>
-              </article>
-            </li>
-            <!--Article end 1-->
+              </div>
+            </article>
+          </li>
+          <!--Article end 1-->
 
-            <!--Article 2-->
-            <li>
-              <article class="post post-list">
-                <div class="entry-content media">
-                  <div class="media-left"> <a href=" {% static '#.' %} " title="" class="entry-image"> <img width="80"
-                        height="80" src=" {% static 'images/news-2.jpg' %} " alt="Your alt text here"> </a> </div>
-                  <div class="media-body">
-                    <h4 class="entry-title"> <a href=" {% static '#.' %} ">Sed fermentum at lectus nec porta.</a> </h4>
-                    <div class="entry-content-inner">
-                      <div class="entry-meta"> <span class="entry-date">Jan 28, 2016</span> </div>
-                    </div>
+          <!--Article 2-->
+          <li>
+            <article class="post post-list">
+              <div class="entry-content media">
+                <div class="media-left"> <a href=" {% static '#.' %} " title="" class="entry-image"> <img width="80"
+                      height="80" src=" {% static 'images/news-2.jpg' %} " alt="Your alt text here"> </a> </div>
+                <div class="media-body">
+                  <h4 class="entry-title"> <a href=" {% static '#.' %} ">Sed fermentum at lectus nec porta.</a> </h4>
+                  <div class="entry-content-inner">
+                    <div class="entry-meta"> <span class="entry-date">Jan 28, 2016</span> </div>
                   </div>
                 </div>
-              </article>
-            </li>
-            <!--Article end 2-->
+              </div>
+            </article>
+          </li>
+          <!--Article end 2-->
 
-            <!--Article 3-->
-            <li>
-              <article class="post post-list">
-                <div class="entry-content media">
-                  <div class="media-left"> <a href=" {% static '#.' %} " title="" class="entry-image"> <img width="80"
-                        height="80" src=" {% static 'images/news-3.jpg' %} " alt="Your alt text here"> </a> </div>
-                  <div class="media-body">
-                    <h4 class="entry-title"> <a href=" {% static '#.' %} ">Sed fermentum at lectus nec porta.</a> </h4>
-                    <div class="entry-content-inner">
-                      <div class="entry-meta"> <span class="entry-date">Jan 28, 2016</span> </div>
-                    </div>
-                  </div>
-                </div>
-              </article>
-            </li>
-            <!--Article end 3-->
-          </ul>
-        </div>
+          
+        </ul>
       </div>
     </div>
   </div>
-  <!--Footer end-->
+</div>
+<!--Footer end-->
 
-  <!--Copyright-->
-  <div class="copyright">
-    <div class="container">
-      <div class="bttxt">Copyright &copy; 2022 Your Company Name. All Rights Reserved.</div>
-    </div>
+<!--Copyright-->
+<div class="copyright">
+  <div class="container">
+    <div class="bttxt">Copyright &copy; 2017 Your Company Name. All Rights Reserved. Design by: <a
+        href="http://graphicriver.net/user/ecreativesol" target="_blank">eCreativeSolutions</a></div>
   </div>
+</div>
 
-  <!-- Bootstrap's JavaScript -->
-  <script src=" {% static 'js/jquery-2.1.4.min.js' %} "></script>
-  <script src=" {% static 'js/bootstrap.min.js' %} "></script>
+<!-- Bootstrap's JavaScript -->
+<script src=" {% static 'js/jquery-2.1.4.min.js' %} "></script>
+<script src=" {% static 'js/bootstrap.min.js' %} "></script>
 
-  <!-- Revolution Slider -->
-  <script type="text/javascript" src=" {% static 'js/revolution-slider/js/jquery.themepunch.tools.min.js' %} "></script>
-  <script type="text/javascript"
-    src=" {% static 'js/revolution-slider/js/jquery.themepunch.revolution.min.js' %} "></script>
-  <!-- map with geo locations -->
+<!-- Owl carousel -->
+<script src=" {% static 'js/owl.carousel.js' %} "></script>
 
-  <!-- Owl carousel -->
-  <script src=" {% static 'js/owl.carousel.js' %} "></script>
-
-  <!-- Custom js -->
-  <script src=" {% static 'js/script.js' %} "></script>
+<!-- Custom js -->
+<script src=" {% static 'js/script.js' %} "></script>
 </body>
+
+<!-- Mirrored from www.sharjeelanjum.com/html/jobs-portal/demo/job-listing.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Mar 2022 15:17:41 GMT -->
 
 </html>
