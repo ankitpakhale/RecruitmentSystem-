@@ -215,3 +215,11 @@ def register(request):
 
 def typography(request):
     return render(request,'typography.html')
+
+
+# only for backup
+def index1(request):
+    return render(request,'index.html')
+
+def index2(request):
+    return render(request,'index2.html')

@@ -11,6 +11,12 @@ urlpatterns = [
     path('dash/', views.dashboard, name='DASHBOARD'),
     path('logout/', views.userLogOut, name='LOGOUT'), 
 
+
+
+    path('i1/', views.index1, name='index1'),
+    path('i2/', views.index2, name='index2'),
+    
+    
     path('', views.home, name='HOME'),
     path('notfound/', views.notFound, name='NOTFOUND'), 
     path('about/', views.about, name='ABOUT'), 
