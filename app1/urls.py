@@ -7,7 +7,7 @@ app_name = 'app1'
 urlpatterns = [
     path('hello/',views.hello, name='HELLO'),
     path('signup/',views.SignupView, name='SIGNUP'),
-    path('login/', views.userLogin, name='LOGIN'),
+    path('login/', views.userLogin, name='LOGIN1'),
     path('', views.dashboard, name='DASHBOARD'),
     path('logout/', views.userLogOut, name='LOGOUT'), 
 
@@ -27,7 +27,7 @@ urlpatterns = [
     path('faqs/', views.faqs, name='FAQS'), 
     path('jobdetails/', views.jobDetails, name='JOBDETAILS'), 
     path('joblisting/', views.jobListing, name='JOBLISTING'), 
-    path('login1/', views.login1, name='LOGIN1'), 
+
     path('packages/', views.packages, name='PACKAGES'), 
     path('postJob/', views.postJob, name='POSTJOB'), 
     path('register/', views.register, name='REGISTER'), 

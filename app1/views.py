@@ -57,6 +57,7 @@ def SignupView(request):
 
 def userLogin(request):
     if request.POST:
+        print("insode post")
         em = request.POST.get('email')
         pass1 = request.POST.get('password')
       
@@ -64,12 +65,14 @@ def userLogin(request):
         check = signUp.objects.get(email = em)
         print("Email is ",em)
         if check.password == pass1:
+            
             request.session['email'] = check.email
+
             print(f'{check.name} Successfully logged in')
-            return redirect('app1:DASHBOARD')
+            return redirect('app1:HOME')
         else:
             return HttpResponse('Invalid Password')
-    return render(request,'login.html')
+    return render(request,'login1.html')
 
 
 def dashboard(request):
@@ -114,7 +117,7 @@ def dashboard(request):
 def userLogOut(request):
     del request.session['email']
     print('User logged out successfully')
-    return redirect('app1:LOGIN')
+    return redirect('app1:LOGIN1')
 
 
 def home(request):
@@ -193,8 +196,6 @@ def jobListing(request):
     obj = studentData.objects.all()
     return render(request,'job-listing.html', {'obj': obj})
 
-def login1(request):
-    return render(request,'login1.html')
 
 def packages(request):
     return render(request,'packages.html')
