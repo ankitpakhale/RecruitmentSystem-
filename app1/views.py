@@ -123,7 +123,8 @@ def home(request):
     if 'email' in request.session:
         student1 = signUp.objects.get(email=request.session['email'])
         student = student1.isStu
-        return render(request,'index3.html', {'student': student})
+        em = student1.email
+        return render(request,'index3.html', {'student': student, 'em':em})
     return redirect('app1:LOGIN1')
 
 def notFound(request):
